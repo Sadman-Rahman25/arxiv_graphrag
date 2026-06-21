@@ -851,3 +851,56 @@ vllm:
   display: "vLLM"
   aliases: ["vLLM", "PagedAttention"]
   category: architecture
+
+# =============================================================================
+# Adversarial / security (attacks on RAG systems)
+# =============================================================================
+
+poisoned_rag:
+  display: "PoisonedRAG"
+  aliases: ["PoisonedRAG", "Poisoned RAG"]
+  category: adversarial
+
+bad_rag:
+  display: "BadRAG"
+  aliases: ["BadRAG", "Bad RAG", "TrojRAG"]
+  category: adversarial
+
+agent_poison:
+  display: "AgentPoison"
+  aliases: ["AgentPoison", "Agent Poison"]
+  category: adversarial
+
+jamming_attack:
+  display: "Jamming Attack on RAG"
+  aliases: ["RAG jamming", "jamming attack on retrieval"]
+  category: adversarial
+
+prompt_injection:
+  display: "Prompt Injection"
+  aliases: ["prompt injection", "prompt-injection attack"]
+  category: adversarial
+
+# =============================================================================
+# RAG frameworks / toolkits (libraries for building RAG, not methods themselves)
+# =============================================================================
+
+flashrag:
+  display: "FlashRAG"
+  aliases: ["FlashRAG", "Flash RAG"]
+  category: framework
+
+haystack:
+  display: "Haystack"
+  aliases: ["Haystack framework", "deepset Haystack"]
+  category: framework
+
+pyserini:
+  display: "Pyserini"
+  aliases: ["Pyserini"]
+  category: framework
+
+ragflow:
+  display: "RAGFlow"
+  aliases: ["RAGFlow", "RAG Flow"]
+  category: framework

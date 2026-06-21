@@ -8,3 +8,5 @@ data/extractions/
 .fetch_state.json
 .corpus_fetch_state.json
 .recovery_processed.txt
+data/chroma_db_test/
+data/chroma_db/

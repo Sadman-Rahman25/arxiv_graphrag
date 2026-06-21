@@ -1,0 +1,283 @@
+# Datasets gazetteer for arXiv GraphRAG project.
+# Each entry: canonical id (lowercase, snake_case) -> metadata.
+# Categories (task_type semantics):
+#   multi_hop_qa         - multi-step reasoning over multiple docs
+#   open_domain_qa       - single-fact QA over a large corpus
+#   retrieval_benchmark  - measures retrieval quality directly
+#   rag_benchmark        - measures end-to-end RAG quality
+#   domain_specific      - medical, financial, legal, scientific
+#   dialog_qa            - conversational QA
+#   fact_verification    - claim verification tasks
+#   long_context         - tests long-context reasoning
+#   general_eval         - broad LLM benchmarks (MMLU etc.)
+#   summarization        - summarization datasets
+
+# =============================================================================
+# Multi-hop QA (core for GraphRAG eval)
+# =============================================================================
+
+hotpotqa:
+  display: "HotpotQA"
+  aliases: ["HotpotQA", "HotPotQA"]
+  category: multi_hop_qa
+
+musique:
+  display: "MuSiQue"
+  aliases: ["MuSiQue", "MuSiQue-Ans", "MuSiQue-Full"]
+  category: multi_hop_qa
+
+wikimultihop:
+  display: "2WikiMultiHopQA"
+  aliases: ["2WikiMultiHopQA", "2WikiMultiHop", "2Wiki-MultiHop", "2WikiMHQA"]
+  category: multi_hop_qa
+
+wikihop:
+  display: "WikiHop"
+  aliases: ["WikiHop", "Wiki Hop", "QAngaroo"]
+  category: multi_hop_qa
+
+strategyqa:
+  display: "StrategyQA"
+  aliases: ["StrategyQA", "Strategy QA"]
+  category: multi_hop_qa
+
+complexwebqa:
+  display: "ComplexWebQuestions"
+  aliases: ["ComplexWebQuestions", "CWQ", "Complex Web Questions"]
+  category: multi_hop_qa
+
+multihop_rag:
+  display: "MultiHop-RAG"
+  aliases: ["MultiHop-RAG", "MultiHopRAG", "Multi-Hop RAG"]
+  category: multi_hop_qa
+
+# =============================================================================
+# Open-domain QA
+# =============================================================================
+
+natural_questions:
+  display: "Natural Questions"
+  aliases: ["Natural Questions", "NaturalQuestions", "NQ"]
+  category: open_domain_qa
+
+triviaqa:
+  display: "TriviaQA"
+  aliases: ["TriviaQA", "Trivia QA"]
+  category: open_domain_qa
+
+squad:
+  display: "SQuAD"
+  aliases: ["SQuAD", "SQuAD 2.0", "SQuADv2", "SQuAD-v2"]
+  category: open_domain_qa
+
+webquestions:
+  display: "WebQuestions"
+  aliases: ["WebQuestions", "WebQSP", "WebQ"]
+  category: open_domain_qa
+
+popqa:
+  display: "PopQA"
+  aliases: ["PopQA"]
+  category: open_domain_qa
+
+entityquestions:
+  display: "EntityQuestions"
+  aliases: ["EntityQuestions", "Entity Questions"]
+  category: open_domain_qa
+
+ambig_qa:
+  display: "AmbigQA"
+  aliases: ["AmbigQA", "Ambig QA"]
+  category: open_domain_qa
+
+# =============================================================================
+# Retrieval benchmarks
+# =============================================================================
+
+ms_marco:
+  display: "MS MARCO"
+  aliases: ["MS MARCO", "MSMARCO", "MS-MARCO"]
+  category: retrieval_benchmark
+
+beir:
+  display: "BEIR"
+  aliases: ["BEIR"]
+  category: retrieval_benchmark
+
+kilt:
+  display: "KILT"
+  aliases: ["KILT", "Knowledge Intensive Language Tasks"]
+  category: retrieval_benchmark
+
+mteb:
+  display: "MTEB"
+  aliases: ["MTEB", "Massive Text Embedding Benchmark"]
+  category: retrieval_benchmark
+
+miracl:
+  display: "MIRACL"
+  aliases: ["MIRACL"]
+  category: retrieval_benchmark
+
+trec_dl:
+  display: "TREC Deep Learning Track"
+  aliases: ["TREC DL", "TREC Deep Learning"]
+  category: retrieval_benchmark
+
+fiqa:
+  display: "FiQA"
+  aliases: ["FiQA", "FiQA-2018"]
+  category: retrieval_benchmark
+
+nfcorpus:
+  display: "NFCorpus"
+  aliases: ["NFCorpus"]
+  category: retrieval_benchmark
+
+scifact:
+  display: "SciFact"
+  aliases: ["SciFact", "Sci Fact"]
+  category: retrieval_benchmark
+
+scidocs:
+  display: "SciDocs"
+  aliases: ["SciDocs", "Sci Docs"]
+  category: retrieval_benchmark
+
+arguana:
+  display: "ArguAna"
+  aliases: ["ArguAna"]
+  category: retrieval_benchmark
+
+# =============================================================================
+# RAG-specific benchmarks
+# =============================================================================
+
+rgb_benchmark:
+  display: "RGB"
+  aliases: ["RGB Benchmark", "Retrieval-Augmented Generation Benchmark"]
+  category: rag_benchmark
+
+crag_benchmark:
+  display: "CRAG Benchmark"
+  aliases: ["CRAG benchmark", "Comprehensive RAG Benchmark", "Meta CRAG"]
+  category: rag_benchmark
+
+ragbench:
+  display: "RAGBench"
+  aliases: ["RAGBench", "RAG Bench"]
+  category: rag_benchmark
+
+freshqa:
+  display: "FreshQA"
+  aliases: ["FreshQA", "Fresh QA"]
+  category: rag_benchmark
+
+researchy_questions:
+  display: "Researchy Questions"
+  aliases: ["Researchy Questions", "ResearchyQuestions"]
+  category: rag_benchmark
+
+# =============================================================================
+# Domain-specific (medical / financial / legal / scientific)
+# =============================================================================
+
+pubmedqa:
+  display: "PubMedQA"
+  aliases: ["PubMedQA", "PubMed QA"]
+  category: domain_specific
+
+bioasq:
+  display: "BioASQ"
+  aliases: ["BioASQ"]
+  category: domain_specific
+
+medqa:
+  display: "MedQA"
+  aliases: ["MedQA", "MedQA-USMLE", "USMLE"]
+  category: domain_specific
+
+finqa:
+  display: "FinQA"
+  aliases: ["FinQA", "Fin QA"]
+  category: domain_specific
+
+financebench:
+  display: "FinanceBench"
+  aliases: ["FinanceBench", "Finance Bench"]
+  category: domain_specific
+
+legalbench:
+  display: "LegalBench"
+  aliases: ["LegalBench", "Legal Bench"]
+  category: domain_specific
+
+climatefever:
+  display: "ClimateFEVER"
+  aliases: ["ClimateFEVER", "Climate-FEVER", "Climate FEVER"]
+  category: domain_specific
+
+# =============================================================================
+# Dialog / conversational QA
+# =============================================================================
+
+coqa:
+  display: "CoQA"
+  aliases: ["CoQA", "Co QA"]
+  category: dialog_qa
+
+quac:
+  display: "QuAC"
+  aliases: ["QuAC", "Question Answering in Context"]
+  category: dialog_qa
+
+topiocqa:
+  display: "TopiOCQA"
+  aliases: ["TopiOCQA", "Topic-Open Conversational QA"]
+  category: dialog_qa
+
+# =============================================================================
+# Fact verification
+# =============================================================================
+
+fever:
+  display: "FEVER"
+  aliases: ["FEVER", "Fact Extraction and VERification"]
+  category: fact_verification
+
+feverous:
+  display: "FEVEROUS"
+  aliases: ["FEVEROUS"]
+  category: fact_verification
+
+# =============================================================================
+# Long-context evaluation
+# =============================================================================
+
+narrativeqa:
+  display: "NarrativeQA"
+  aliases: ["NarrativeQA", "Narrative QA"]
+  category: long_context
+
+eli5:
+  display: "ELI5"
+  aliases: ["ELI5", "Explain Like I'm 5"]
+  category: long_context
+
+babilong:
+  display: "BABILong"
+  aliases: ["BABILong"]
+  category: long_context
+
+needle_haystack:
+  display: "Needle in a Haystack"
+  aliases: ["Needle in a Haystack", "NIAH", "needle-in-a-haystack"]
+  category: long_context
+
+ruler:
+  display: "RULER"
+  aliases: ["RULER benchmark"]
+  category: long_context
+
+# =============================================================================
+# General LLM eval (often cited in RAG

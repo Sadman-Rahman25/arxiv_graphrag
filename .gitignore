@@ -1,25 +1,10 @@
-# venv
-.venv/
+﻿.venv/
 __pycache__/
 *.pyc
-
-# secrets
 .env
-
-# data
 data/raw/
 data/extractions/
-data/chroma_db/
-bm25.pkl
-
-# eval outputs
-eval/results/*.csv
-eval/results/*.png
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
+*.bak
+.fetch_state.json
+.corpus_fetch_state.json
+.recovery_processed.txt

@@ -1,0 +1,853 @@
+# Methods gazetteer for arXiv GraphRAG project.
+# Each entry: canonical id (lowercase, snake_case) -> metadata.
+# 
+# `aliases` are the strings the extractor will match in text (case-insensitive).
+# `category` groups methods for downstream filtering and analysis.
+
+# =============================================================================
+# RAG and retrieval-augmented generation
+# =============================================================================
+
+rag:
+  display: "Retrieval-Augmented Generation"
+  aliases: ["RAG", "retrieval-augmented generation", "retrieval augmented generation"]
+  category: retrieval_generation
+
+graphrag:
+  display: "GraphRAG"
+  aliases: ["GraphRAG", "Graph RAG", "graph-rag", "graph retrieval-augmented generation"]
+  category: retrieval_generation
+
+fid:
+  display: "Fusion-in-Decoder"
+  aliases: ["FiD", "Fusion-in-Decoder", "fusion in decoder"]
+  category: retrieval_generation
+
+realm:
+  display: "REALM"
+  aliases: ["REALM", "Retrieval-Augmented Language Model"]
+  category: retrieval_generation
+
+retro:
+  display: "RETRO"
+  aliases: ["RETRO", "Retrieval-Enhanced Transformer"]
+  category: retrieval_generation
+
+atlas:
+  display: "Atlas"
+  aliases: ["Atlas"]
+  category: retrieval_generation
+
+self_rag:
+  display: "Self-RAG"
+  aliases: ["Self-RAG", "SELF-RAG", "Self RAG"]
+  category: retrieval_generation
+
+crag:
+  display: "Corrective RAG"
+  aliases: ["CRAG", "Corrective RAG", "Corrective Retrieval Augmented Generation"]
+  category: retrieval_generation
+
+ra_dit:
+  display: "RA-DIT"
+  aliases: ["RA-DIT", "Retrieval-Augmented Dual Instruction Tuning"]
+  category: retrieval_generation
+
+raptor:
+  display: "RAPTOR"
+  aliases: ["RAPTOR"]
+  category: retrieval_generation
+
+light_rag:
+  display: "LightRAG"
+  aliases: ["LightRAG", "Light RAG"]
+  category: retrieval_generation
+
+# =============================================================================
+# Query processing and rewriting
+# =============================================================================
+
+hyde:
+  display: "HyDE"
+  aliases: ["HyDE", "Hypothetical Document Embeddings"]
+  category: query_processing
+
+query_decomposition:
+  display: "Query Decomposition"
+  aliases: ["query decomposition", "query rewriting", "sub-query generation"]
+  category: query_processing
+
+query_expansion:
+  display: "Query Expansion"
+  aliases: ["query expansion", "pseudo-relevance feedback", "PRF"]
+  category: query_processing
+
+step_back:
+  display: "Step-Back Prompting"
+  aliases: ["step-back prompting", "step back prompting"]
+  category: query_processing
+
+# =============================================================================
+# Dense retrieval
+# =============================================================================
+
+dpr:
+  display: "Dense Passage Retrieval"
+  aliases: ["DPR", "Dense Passage Retrieval", "dense passage retrieval"]
+  category: dense_retrieval
+
+colbert:
+  display: "ColBERT"
+  aliases: ["ColBERT"]
+  category: dense_retrieval
+
+colbertv2:
+  display: "ColBERTv2"
+  aliases: ["ColBERTv2", "ColBERT v2", "ColBERT-v2"]
+  category: dense_retrieval
+
+ance:
+  display: "ANCE"
+  aliases: ["ANCE", "Approximate Nearest Neighbor Negative Contrastive Estimation"]
+  category: dense_retrieval
+
+splade:
+  display: "SPLADE"
+  aliases: ["SPLADE", "SPLADEv2", "SPLADE v2"]
+  category: dense_retrieval
+
+contriever:
+  display: "Contriever"
+  aliases: ["Contriever"]
+  category: dense_retrieval
+
+simcse:
+  display: "SimCSE"
+  aliases: ["SimCSE"]
+  category: dense_retrieval
+
+# =============================================================================
+# Lexical / sparse retrieval
+# =============================================================================
+
+bm25:
+  display: "BM25"
+  aliases: ["BM25", "Okapi BM25"]
+  category: lexical_retrieval
+
+tf_idf:
+  display: "TF-IDF"
+  aliases: ["TF-IDF", "TFIDF", "tf-idf"]
+  category: lexical_retrieval
+
+doc2query:
+  display: "doc2query"
+  aliases: ["doc2query", "docTTTTTquery", "docT5query"]
+  category: lexical_retrieval
+
+# =============================================================================
+# Embedding models
+# =============================================================================
+
+bge:
+  display: "BGE Embeddings"
+  aliases: ["BGE", "BGE-large", "BGE-base", "BGE-small", "BAAI/bge"]
+  category: embedding_model
+
+bge_m3:
+  display: "BGE-M3"
+  aliases: ["BGE-M3", "bge-m3"]
+  category: embedding_model
+
+e5:
+  display: "E5 Embeddings"
+  aliases: ["E5", "E5-large", "E5-base", "intfloat/e5"]
+  category: embedding_model
+
+instructor_embed:
+  display: "Instructor Embeddings"
+  aliases: ["Instructor", "instructor-xl", "instructor-large"]
+  category: embedding_model
+
+nomic_embed:
+  display: "Nomic Embed"
+  aliases: ["Nomic Embed", "nomic-embed", "nomic-embed-text"]
+  category: embedding_model
+
+openai_ada:
+  display: "OpenAI text-embedding-ada-002"
+  aliases: ["text-embedding-ada-002", "ada-002", "OpenAI ada"]
+  category: embedding_model
+
+openai_te3:
+  display: "OpenAI text-embedding-3"
+  aliases: ["text-embedding-3-large", "text-embedding-3-small"]
+  category: embedding_model
+
+cohere_embed:
+  display: "Cohere Embed"
+  aliases: ["Cohere Embed", "embed-v3", "embed-english-v3"]
+  category: embedding_model
+
+sentence_bert:
+  display: "Sentence-BERT"
+  aliases: ["Sentence-BERT", "SBERT", "sentence-transformers"]
+  category: embedding_model
+
+# =============================================================================
+# Reranking
+# =============================================================================
+
+cross_encoder:
+  display: "Cross-Encoder Reranker"
+  aliases: ["cross-encoder", "cross encoder reranker"]
+  category: reranking
+
+monot5:
+  display: "monoT5"
+  aliases: ["monoT5", "mono-T5"]
+  category: reranking
+
+monobert:
+  display: "monoBERT"
+  aliases: ["monoBERT", "mono-BERT"]
+  category: reranking
+
+bge_reranker:
+  display: "BGE Reranker"
+  aliases: ["BGE-reranker", "BGE reranker", "bge-reranker-v2"]
+  category: reranking
+
+rankgpt:
+  display: "RankGPT"
+  aliases: ["RankGPT"]
+  category: reranking
+
+# =============================================================================
+# Knowledge graph methods
+# =============================================================================
+
+knowledge_graph:
+  display: "Knowledge Graph"
+  aliases: ["knowledge graph", "KG"]
+  category: knowledge_graph
+
+kg_rag:
+  display: "Knowledge Graph RAG"
+  aliases: ["KG-RAG", "KG RAG", "knowledge graph augmented generation"]
+  category: knowledge_graph
+
+community_detection:
+  display: "Community Detection"
+  aliases: ["community detection", "Leiden algorithm", "Louvain algorithm"]
+  category: knowledge_graph
+
+# =============================================================================
+# Chunking and indexing
+# =============================================================================
+
+semantic_chunking:
+  display: "Semantic Chunking"
+  aliases: ["semantic chunking", "semantic splitter"]
+  category: chunking
+
+recursive_chunking:
+  display: "Recursive Chunking"
+  aliases: ["recursive chunking", "recursive text splitter"]
+  category: chunking
+
+sliding_window:
+  display: "Sliding Window Chunking"
+  aliases: ["sliding window", "overlapping chunks"]
+  category: chunking
+
+# =============================================================================
+# Vector index structures
+# =============================================================================
+
+hnsw:
+  display: "HNSW"
+  aliases: ["HNSW", "Hierarchical Navigable Small World"]
+  category: vector_index
+
+faiss:
+  display: "FAISS"
+  aliases: ["FAISS", "Facebook AI Similarity Search"]
+  category: vector_index
+
+scann:
+  display: "ScaNN"
+  aliases: ["ScaNN", "Scalable Nearest Neighbors"]
+  category: vector_index
+
+annoy:
+  display: "Annoy"
+  aliases: ["Annoy", "Approximate Nearest Neighbors Oh Yeah"]
+  category: vector_index
+
+ivf:
+  display: "IVF"
+  aliases: ["IVF", "Inverted File Index"]
+  category: vector_index
+
+pq:
+  display: "Product Quantization"
+  aliases: ["product quantization", "PQ"]
+  category: vector_index
+
+# =============================================================================
+# Foundation models commonly referenced
+# =============================================================================
+
+gpt4:
+  display: "GPT-4"
+  aliases: ["GPT-4", "GPT 4", "gpt-4"]
+  category: llm
+
+gpt35:
+  display: "GPT-3.5"
+  aliases: ["GPT-3.5", "ChatGPT", "gpt-3.5-turbo"]
+  category: llm
+
+llama2:
+  display: "Llama 2"
+  aliases: ["Llama 2", "LLaMA 2", "Llama-2"]
+  category: llm
+
+llama3:
+  display: "Llama 3"
+  aliases: ["Llama 3", "LLaMA 3", "Llama-3", "Llama 3.1", "Llama 3.2", "Llama 3.3"]
+  category: llm
+
+mistral:
+  display: "Mistral"
+  aliases: ["Mistral", "Mistral 7B", "Mixtral"]
+  category: llm
+
+t5:
+  display: "T5"
+  aliases: ["T5", "Text-to-Text Transfer Transformer"]
+  category: llm
+
+bart:
+  display: "BART"
+  aliases: ["BART"]
+  category: llm
+
+bert:
+  display: "BERT"
+  aliases: ["BERT"]
+  category: llm
+
+claude:
+  display: "Claude"
+  aliases: ["Claude", "Claude 3", "Claude 3.5 Sonnet", "Claude Sonnet"]
+  category: llm
+
+gemini:
+  display: "Gemini"
+  aliases: ["Gemini", "Gemini Pro", "Gemini 1.5"]
+  category: llm
+
+# =============================================================================
+# Evaluation frameworks
+# =============================================================================
+
+ragas:
+  display: "RAGAS"
+  aliases: ["RAGAS", "ragas"]
+  category: evaluation
+
+ares:
+  display: "ARES"
+  aliases: ["ARES"]
+  category: evaluation
+
+trulens:
+  display: "TruLens"
+  aliases: ["TruLens"]
+  category: evaluation
+
+# =============================================================================
+# Fusion and ranking aggregation
+# =============================================================================
+
+rrf:
+  display: "Reciprocal Rank Fusion"
+  aliases: ["RRF", "reciprocal rank fusion"]
+  category: fusion
+
+# =============================================================================
+# Fine-tuning / adaptation
+# =============================================================================
+
+lora:
+  display: "LoRA"
+  aliases: ["LoRA", "Low-Rank Adaptation"]
+  category: adaptation
+
+qlora:
+  display: "QLoRA"
+  aliases: ["QLoRA"]
+  category: adaptation
+
+dpo:
+  display: "DPO"
+  aliases: ["DPO", "Direct Preference Optimization"]
+  category: adaptation
+
+rlhf:
+  display: "RLHF"
+  aliases: ["RLHF", "Reinforcement Learning from Human Feedback"]
+  category: adaptation
+
+  # =============================================================================
+# More RAG variants
+# =============================================================================
+
+replug:
+  display: "REPLUG"
+  aliases: ["REPLUG"]
+  category: retrieval_generation
+
+ircot:
+  display: "IRCoT"
+  aliases: ["IRCoT", "Interleaving Retrieval CoT", "Interleaving Retrieval with Chain-of-Thought"]
+  category: retrieval_generation
+
+iter_retgen:
+  display: "ITER-RETGEN"
+  aliases: ["ITER-RETGEN", "Iter-RetGen", "iterative retrieval generation"]
+  category: retrieval_generation
+
+knn_lm:
+  display: "kNN-LM"
+  aliases: ["kNN-LM", "k-NN LM", "Nearest Neighbor Language Model"]
+  category: retrieval_generation
+
+flare:
+  display: "FLARE"
+  aliases: ["FLARE", "Forward-Looking Active REtrieval"]
+  category: retrieval_generation
+
+react:
+  display: "ReAct"
+  aliases: ["ReAct", "Reasoning and Acting"]
+  category: retrieval_generation
+
+self_ask:
+  display: "Self-Ask"
+  aliases: ["Self-Ask", "Self Ask"]
+  category: retrieval_generation
+
+toolformer:
+  display: "Toolformer"
+  aliases: ["Toolformer"]
+  category: retrieval_generation
+
+hipporag:
+  display: "HippoRAG"
+  aliases: ["HippoRAG", "Hippo RAG"]
+  category: retrieval_generation
+
+longrag:
+  display: "LongRAG"
+  aliases: ["LongRAG", "Long RAG"]
+  category: retrieval_generation
+
+adaptive_rag:
+  display: "Adaptive-RAG"
+  aliases: ["Adaptive-RAG", "Adaptive RAG"]
+  category: retrieval_generation
+
+speculative_rag:
+  display: "Speculative RAG"
+  aliases: ["Speculative RAG", "speculative retrieval"]
+  category: retrieval_generation
+
+webgpt:
+  display: "WebGPT"
+  aliases: ["WebGPT"]
+  category: retrieval_generation
+
+dsp:
+  display: "DSPy / Demonstrate-Search-Predict"
+  aliases: ["DSPy", "DSP", "Demonstrate-Search-Predict"]
+  category: retrieval_generation
+
+agentic_rag:
+  display: "Agentic RAG"
+  aliases: ["Agentic RAG", "Agentic Retrieval-Augmented Generation"]
+  category: retrieval_generation
+
+# =============================================================================
+# Knowledge graph methods (core for THIS project)
+# =============================================================================
+
+tog:
+  display: "Think-on-Graph"
+  aliases: ["ToG", "Think-on-Graph", "Think on Graph"]
+  category: knowledge_graph
+
+kaping:
+  display: "KAPING"
+  aliases: ["KAPING", "Knowledge-Augmented Prompting"]
+  category: knowledge_graph
+
+structgpt:
+  display: "StructGPT"
+  aliases: ["StructGPT"]
+  category: knowledge_graph
+
+kgat:
+  display: "KGAT"
+  aliases: ["KGAT", "Knowledge Graph Attention Network"]
+  category: knowledge_graph
+
+mindmap:
+  display: "MindMap"
+  aliases: ["MindMap"]
+  category: knowledge_graph
+
+kg_gpt:
+  display: "KG-GPT"
+  aliases: ["KG-GPT"]
+  category: knowledge_graph
+
+transe:
+  display: "TransE"
+  aliases: ["TransE"]
+  category: knowledge_graph
+
+rotate:
+  display: "RotatE"
+  aliases: ["RotatE"]
+  category: knowledge_graph
+
+complex_embed:
+  display: "ComplEx"
+  aliases: ["ComplEx"]
+  category: knowledge_graph
+
+node2vec:
+  display: "node2vec"
+  aliases: ["node2vec"]
+  category: knowledge_graph
+
+graphsage:
+  display: "GraphSAGE"
+  aliases: ["GraphSAGE"]
+  category: knowledge_graph
+
+gat:
+  display: "Graph Attention Network"
+  aliases: ["GAT", "Graph Attention Network"]
+  category: knowledge_graph
+
+gcn:
+  display: "Graph Convolutional Network"
+  aliases: ["GCN", "Graph Convolutional Network"]
+  category: knowledge_graph
+
+# =============================================================================
+# Multi-hop reasoning prompting
+# =============================================================================
+
+chain_of_thought:
+  display: "Chain-of-Thought"
+  aliases: ["CoT", "Chain-of-Thought", "chain of thought"]
+  category: reasoning
+
+self_consistency:
+  display: "Self-Consistency"
+  aliases: ["Self-Consistency", "self consistency"]
+  category: reasoning
+
+tree_of_thoughts:
+  display: "Tree-of-Thoughts"
+  aliases: ["ToT", "Tree-of-Thoughts", "Tree of Thoughts"]
+  category: reasoning
+
+graph_of_thoughts:
+  display: "Graph-of-Thoughts"
+  aliases: ["GoT", "Graph-of-Thoughts", "Graph of Thoughts"]
+  category: reasoning
+
+# =============================================================================
+# More dense retrievers / embeddings
+# =============================================================================
+
+gtr:
+  display: "GTR (T5 Retriever)"
+  aliases: ["GTR", "Generalizable T5 Retriever"]
+  category: dense_retrieval
+
+tas_b:
+  display: "TAS-B"
+  aliases: ["TAS-B"]
+  category: dense_retrieval
+
+mpnet:
+  display: "MPNet"
+  aliases: ["MPNet", "all-mpnet-base-v2"]
+  category: embedding_model
+
+snowflake_arctic:
+  display: "Snowflake Arctic Embed"
+  aliases: ["Snowflake Arctic Embed", "snowflake-arctic-embed", "arctic-embed"]
+  category: embedding_model
+
+mxbai_embed:
+  display: "Mixedbread Embed"
+  aliases: ["mxbai-embed", "Mixedbread", "mxbai-embed-large-v1"]
+  category: embedding_model
+
+# =============================================================================
+# Chunking / contextualization
+# =============================================================================
+
+late_chunking:
+  display: "Late Chunking"
+  aliases: ["Late Chunking", "late chunking"]
+  category: chunking
+
+contextual_retrieval:
+  display: "Contextual Retrieval"
+  aliases: ["Contextual Retrieval", "contextual retrieval"]
+  category: chunking
+
+parent_document_retrieval:
+  display: "Parent Document Retrieval"
+  aliases: ["parent document retrieval", "parent-document retrieval"]
+  category: chunking
+
+# =============================================================================
+# More vector index structures
+# =============================================================================
+
+diskann:
+  display: "DiskANN"
+  aliases: ["DiskANN"]
+  category: vector_index
+
+lsh:
+  display: "Locality-Sensitive Hashing"
+  aliases: ["LSH", "Locality-Sensitive Hashing", "locality sensitive hashing"]
+  category: vector_index
+
+# =============================================================================
+# More foundation models commonly cited
+# =============================================================================
+
+falcon:
+  display: "Falcon"
+  aliases: ["Falcon", "Falcon-40B", "Falcon-7B"]
+  category: llm
+
+qwen:
+  display: "Qwen"
+  aliases: ["Qwen", "Qwen2", "Qwen2.5", "Qwen-7B"]
+  category: llm
+
+deepseek:
+  display: "DeepSeek"
+  aliases: ["DeepSeek", "DeepSeek-V2", "DeepSeek-V3", "DeepSeek-R1"]
+  category: llm
+
+phi:
+  display: "Phi"
+  aliases: ["Phi-2", "Phi-3", "Phi-3.5", "Phi-4"]
+  category: llm
+
+yi:
+  display: "Yi"
+  aliases: ["Yi", "Yi-34B"]
+  category: llm
+
+vicuna:
+  display: "Vicuna"
+  aliases: ["Vicuna"]
+  category: llm
+
+alpaca:
+  display: "Alpaca"
+  aliases: ["Alpaca"]
+  category: llm
+
+gemma:
+  display: "Gemma"
+  aliases: ["Gemma", "Gemma 2", "Gemma-7B"]
+  category: llm
+
+# =============================================================================
+# Multimodal retrieval
+# =============================================================================
+
+clip:
+  display: "CLIP"
+  aliases: ["CLIP"]
+  category: multimodal
+
+blip:
+  display: "BLIP"
+  aliases: ["BLIP", "BLIP-2"]
+  category: multimodal
+
+vit:
+  display: "Vision Transformer"
+  aliases: ["ViT", "Vision Transformer"]
+  category: multimodal
+
+# =============================================================================
+# Long-context techniques
+# =============================================================================
+
+streamingllm:
+  display: "StreamingLLM"
+  aliases: ["StreamingLLM", "Streaming LLM"]
+  category: long_context
+
+yarn:
+  display: "YaRN"
+  aliases: ["YaRN"]
+  category: long_context
+
+position_interpolation:
+  display: "Position Interpolation"
+  aliases: ["Position Interpolation"]   # removed "PI"
+  category: long_context
+
+# =============================================================================
+# Agent / orchestration frameworks (often cited)
+# =============================================================================
+
+autogpt:
+  display: "AutoGPT"
+  aliases: ["AutoGPT", "Auto-GPT"]
+  category: agent_framework
+
+langchain:
+  display: "LangChain"
+  aliases: ["LangChain"]
+  category: agent_framework
+
+llamaindex:
+  display: "LlamaIndex"
+  aliases: ["LlamaIndex", "Llama Index", "GPT Index"]
+  category: agent_framework
+
+langgraph:
+  display: "LangGraph"
+  aliases: ["LangGraph"]
+  category: agent_framework
+
+# =============================================================================
+# Evaluation metrics
+# =============================================================================
+
+mrr:
+  display: "Mean Reciprocal Rank"
+  aliases: ["MRR", "Mean Reciprocal Rank"]
+  category: evaluation
+
+ndcg:
+  display: "nDCG"
+  aliases: ["nDCG", "NDCG", "Normalized Discounted Cumulative Gain"]
+  category: evaluation
+
+recall_at_k:
+  display: "Recall@k"
+  aliases: ["Recall@k", "recall@10", "recall@100", "Recall at k"]
+  category: evaluation
+
+llm_as_judge:
+  display: "LLM-as-Judge"
+  aliases: ["LLM-as-Judge", "LLM as Judge", "LLM-as-a-Judge"]
+  category: evaluation
+
+g_eval:
+  display: "G-Eval"
+  aliases: ["G-Eval"]
+  category: evaluation
+
+# =============================================================================
+# PEFT and fine-tuning
+# =============================================================================
+
+peft:
+  display: "Parameter-Efficient Fine-Tuning"
+  aliases: ["PEFT", "Parameter-Efficient Fine-Tuning"]
+  category: adaptation
+
+p_tuning:
+  display: "P-Tuning"
+  aliases: ["P-Tuning", "P-Tuning v2"]
+  category: adaptation
+
+prefix_tuning:
+  display: "Prefix-Tuning"
+  aliases: ["Prefix-Tuning", "Prefix Tuning"]
+  category: adaptation
+
+adapters:
+  display: "Adapters"
+  aliases: ["Adapter Modules", "AdapterFusion"]
+  category: adaptation
+
+instruction_tuning:
+  display: "Instruction Tuning"
+  aliases: ["Instruction Tuning", "instruction-tuning"]
+  category: adaptation
+
+self_instruct:
+  display: "Self-Instruct"
+  aliases: ["Self-Instruct", "Self Instruct"]
+  category: adaptation
+
+# =============================================================================
+# Retrieval system techniques
+# =============================================================================
+
+hard_negative_mining:
+  display: "Hard Negative Mining"
+  aliases: ["hard negative mining", "hard negatives"]
+  category: training_technique
+
+in_batch_negatives:
+  display: "In-Batch Negatives"
+  aliases: ["in-batch negatives", "in batch negatives"]
+  category: training_technique
+
+retriever_distillation:
+  display: "Retriever Distillation"
+  aliases: ["retriever distillation", "knowledge distillation for retrieval"]
+  category: training_technique
+
+hybrid_search:
+  display: "Hybrid Search"
+  aliases: ["hybrid search", "hybrid retrieval"]
+  category: retrieval_technique
+
+# =============================================================================
+# Architecture / serving
+# =============================================================================
+
+moe:
+  display: "Mixture of Experts"
+  aliases: ["MoE", "Mixture of Experts", "Mixture-of-Experts"]
+  category: architecture
+
+speculative_decoding:
+  display: "Speculative Decoding"
+  aliases: ["speculative decoding"]
+  category: architecture
+
+flash_attention:
+  display: "FlashAttention"
+  aliases: ["FlashAttention", "Flash Attention", "FlashAttention-2"]
+  category: architecture
+
+vllm:
+  display: "vLLM"
+  aliases: ["vLLM", "PagedAttention"]
+  category: architecture

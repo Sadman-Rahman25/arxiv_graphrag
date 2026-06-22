@@ -1,12 +1,19 @@
 """Day 5 Gate 5 - Dual-pattern retriever with adaptive RRF.
 
-KEY CHANGE from v1: graph_weight is computed per-query based on the number
-of entities the gazetteer matched in the query string.
-
 Adaptive weighting:
   0 entities matched -> graph_weight = 0.0 (graph contributes nothing)
   1 entity  matched -> graph_weight = 0.7 (low trust; vector should dominate)
   2+ entities matched -> graph_weight = 1.5 (high trust per Day 4)
+
+NOTE on rejected polish: IDF-style weighting (scaling weight by method
+mention count) was tested and rejected. Rationale: method rarity does
+not predict graph result quality. Graph's secondary sort by citation
+count produces noise regardless of method specificity. Single-entity
+matches return "top-cited papers mentioning X" which doesn't align
+with query-specific relevance. The single-vs-multi entity boundary
+captures the real reliability signal: multi-entity matches narrow the
+candidate set enough that citation-sort is reasonable; single-entity
+matches don't, regardless of method frequency.
 """
 import os
 import logging
@@ -146,7 +153,7 @@ def main():
         format_results(q, results)
 
     driver.close()
-    print("\n[Gate 5 v2 complete]")
+    print("\n[Gate 5 v2 (final) complete]")
 
 
 if __name__ == "__main__":

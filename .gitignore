@@ -14,3 +14,5 @@ data/chroma_db/
 data/embeddings/*.jsonl
 
 data/llm_cache/*.jsonl
+
+eval/judge_cache.jsonl

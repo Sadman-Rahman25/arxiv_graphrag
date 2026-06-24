@@ -1,0 +1,1372 @@
+{
+  "timestamp": "20260624_101816",
+  "retriever": "dual",
+  "judge_model": "llama-3.3-70b-versatile",
+  "aggregate": {
+    "faithfulness_mean": 0.619203514739229,
+    "coverage_mean": 0.4375,
+    "n_evaluated": 14
+  },
+  "calibration": {
+    "medium": {
+      "n": 2,
+      "f_mean": 0.5,
+      "c_mean": 0.25
+    },
+    "high": {
+      "n": 12,
+      "f_mean": 0.6390707671957672,
+      "c_mean": 0.46875
+    }
+  },
+  "per_question": [
+    {
+      "question_id": "q01",
+      "regime": "single-method-noisy",
+      "retriever": "dual",
+      "confidence": "medium",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P1",
+            "paperId": "ddbd8fe782ac98e9c64dd98710687a962195dd9b",
+            "sentence": "Self-RAG decides when to retrieve by learning to reflect on its own generation and critique the relevance of the retrieved passages [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract states that Self-RAG generates and reflects on retrieved passages and its own generations.",
+            "cached": true
+          },
+          {
+            "tag": "P3",
+            "paperId": "0fa1b06de73d01c2bfcfd16f0f5cbafb7fd1c553",
+            "sentence": "In contrast, Self-RAG can adaptively decide whether to retrieve and incorporate external knowledge, allowing for more efficient and effective generation [P3].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention Self-RAG adaptively deciding whether to retrieve and incorporate external knowledge.",
+            "cached": true
+          }
+        ],
+        "supported": 1,
+        "partial": 0,
+        "unsupported": 1,
+        "score": 0.5
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Self-RAG uses learned reflection tokens to decide whether to retrieve",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention learned reflection tokens.",
+            "cached": true
+          },
+          {
+            "fact": "Active RAG (FLARE) triggers additional retrieval based on low generation confidence or token probabilities",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention low generation confidence or token probabilities as triggers for Active RAG.",
+            "cached": true
+          },
+          {
+            "fact": "Self-RAG is introspective/adaptive, active RAG is reactive to generation uncertainty",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that Self-RAG is adaptive and introspective, while active RAG is reactive and lacks a built-in mechanism for determining retrieval necessity.",
+            "cached": true
+          },
+          {
+            "fact": "Both methods address the indiscriminate-retrieval problem of vanilla RAG",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention the indiscriminate-retrieval problem of vanilla RAG.",
+            "cached": true
+          }
+        ],
+        "present": 1,
+        "partial": 0,
+        "missing": 3,
+        "score": 0.25
+      }
+    },
+    {
+      "question_id": "q02",
+      "regime": "single-method-noisy",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P1",
+            "paperId": "446c8f9343bc835e677667fbaccb0cfc2badf58b",
+            "sentence": "Several approaches exist for detecting hallucinations in RAG outputs, including Hallucination Aware Tuning (HAT) [P1], creating benchmark datasets like RAGTruth [P2], and using frameworks such as LettuceDetect [P3], LRP4RAG [P7], ReDeEP [P8], and LYNX [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions Hallucination Aware Tuning (HAT) but does not discuss the other approaches listed in the claim.",
+            "cached": true
+          },
+          {
+            "tag": "P2",
+            "paperId": "cfce709a65f90312d2bdc1a6cf0380c19becf694",
+            "sentence": "Several approaches exist for detecting hallucinations in RAG outputs, including Hallucination Aware Tuning (HAT) [P1], creating benchmark datasets like RAGTruth [P2], and using frameworks such as LettuceDetect [P3], LRP4RAG [P7], ReDeEP [P8], and LYNX [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions creating benchmark datasets like RAGTruth for hallucination detection, but does not directly mention the other approaches listed in the claim.",
+            "cached": true
+          },
+          {
+            "tag": "P3",
+            "paperId": "8646fd4f07ba61614119d6c8a08e7de693369cc6",
+            "sentence": "Several approaches exist for detecting hallucinations in RAG outputs, including Hallucination Aware Tuning (HAT) [P1], creating benchmark datasets like RAGTruth [P2], and using frameworks such as LettuceDetect [P3], LRP4RAG [P7], ReDeEP [P8], and LYNX [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions LettuceDetect and RAGTruth, which are part of the claim, but does not mention the other approaches.",
+            "cached": true
+          },
+          {
+            "tag": "P7",
+            "paperId": "0959c3ebecb754adcfff0438de2d4dc40e92a352",
+            "sentence": "Several approaches exist for detecting hallucinations in RAG outputs, including Hallucination Aware Tuning (HAT) [P1], creating benchmark datasets like RAGTruth [P2], and using frameworks such as LettuceDetect [P3], LRP4RAG [P7], ReDeEP [P8], and LYNX [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions one specific approach, LRP4RAG, but does not discuss the other methods listed in the claim.",
+            "cached": true
+          },
+          {
+            "tag": "P8",
+            "paperId": "f3658afcd181e4078e1e96ff86eac224fd92faab",
+            "sentence": "Several approaches exist for detecting hallucinations in RAG outputs, including Hallucination Aware Tuning (HAT) [P1], creating benchmark datasets like RAGTruth [P2], and using frameworks such as LettuceDetect [P3], LRP4RAG [P7], ReDeEP [P8], and LYNX [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions one of the mentioned approaches, ReDeEP, but does not discuss the others.",
+            "cached": true
+          },
+          {
+            "tag": "P9",
+            "paperId": "9de9fa60a786ca23f924f5521326b2a264c22228",
+            "sentence": "Several approaches exist for detecting hallucinations in RAG outputs, including Hallucination Aware Tuning (HAT) [P1], creating benchmark datasets like RAGTruth [P2], and using frameworks such as LettuceDetect [P3], LRP4RAG [P7], ReDeEP [P8], and LYNX [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions LYNX, a hallucination detection model, but does not directly state the existence of other approaches like HAT, RAGTruth, LettuceDetect, LRP4RAG, or ReDeEP.",
+            "cached": true
+          },
+          {
+            "tag": "P10",
+            "paperId": "1b355516e877d086f9cc847364ded059dc310f47",
+            "sentence": "Additionally, two-tiered encoder-based hallucination detection [P10] and other techniques like LLM-Check [P5] have been proposed to mitigate hallucinations in various settings, including clinical decision support [P6].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention two-tiered encoder-based hallucination detection, LLM-Check, or clinical decision support.",
+            "cached": true
+          },
+          {
+            "tag": "P5",
+            "paperId": "630c47372317164fc367153f938903e1d5b76059",
+            "sentence": "Additionally, two-tiered encoder-based hallucination detection [P10] and other techniques like LLM-Check [P5] have been proposed to mitigate hallucinations in various settings, including clinical decision support [P6].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention two-tiered encoder-based hallucination detection or LLM-Check.",
+            "cached": true
+          },
+          {
+            "tag": "P6",
+            "paperId": "740fa1e47c1fb22c364e51e1bd651606cd270fca",
+            "sentence": "Additionally, two-tiered encoder-based hallucination detection [P10] and other techniques like LLM-Check [P5] have been proposed to mitigate hallucinations in various settings, including clinical decision support [P6].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention two-tiered encoder-based hallucination detection or LLM-Check.",
+            "cached": true
+          }
+        ],
+        "supported": 0,
+        "partial": 6,
+        "unsupported": 3,
+        "score": 0.3333333333333333
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Tuning-based approaches like RAG-HAT train the model to avoid hallucinations",
+            "verdict": "partial",
+            "reasoning": "The answer mentions Hallucination Aware Tuning (HAT) but does not explicitly state that it trains the model to avoid hallucinations.",
+            "cached": true
+          },
+          {
+            "fact": "RAGTruth is a hallucination corpus used for training and evaluating detectors",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that RAGTruth is a benchmark dataset, implying its use for training and evaluating detectors.",
+            "cached": true
+          },
+          {
+            "fact": "Detection-based frameworks like LettuceDetect and SEReDeEP identify hallucinations at inference time",
+            "verdict": "present",
+            "reasoning": "The answer mentions LettuceDetect and a similar framework ReDeEP, which aligns with the expected fact about detection-based frameworks.",
+            "cached": true
+          },
+          {
+            "fact": "Approaches span training-time mitigation and inference-time detection",
+            "verdict": "partial",
+            "reasoning": "The answer mentions both training-time mitigation and inference-time detection techniques, but does not explicitly state that approaches span both.",
+            "cached": true
+          }
+        ],
+        "present": 2,
+        "partial": 2,
+        "missing": 0,
+        "score": 0.75
+      }
+    },
+    {
+      "question_id": "q03",
+      "regime": "specific-named-entity",
+      "retriever": "dual",
+      "confidence": "medium",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P3",
+            "paperId": "9ab45aa875b56335303398e84a59a3756cd9d530",
+            "sentence": "Microsoft GraphRAG handles multi-document summarization at the corpus level by leveraging graph structures to model the hierarchical relationships between concepts, enabling more coherent and effective knowledge retrieval for accurate reasoning [P3].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention multi-document summarization or handling at the corpus level.",
+            "cached": true
+          },
+          {
+            "tag": "P1",
+            "paperId": "c1799bf28d1ae93e1631be5b59196ee1e568f538",
+            "sentence": "This approach is particularly useful for query-focused summarization tasks, where traditional RAG methods may struggle [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract states that traditional RAG methods fail on query-focused summarization tasks.",
+            "cached": true
+          },
+          {
+            "tag": "P2",
+            "paperId": "1a454582d3b3aaa6c6cd5b2be075958d13423f78",
+            "sentence": "By organizing unstructured text into graph representations, GraphRAG can capture complex relationships and provide more comprehensive summaries [P2].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions organizing unstructured text into graph representations in GraphRAG, but does not directly state that it captures complex relationships and provides more comprehensive summaries.",
+            "cached": true
+          },
+          {
+            "tag": "P9",
+            "paperId": "40de5fd0c5b9d1fdc890b4b100845b716b676759",
+            "sentence": "However, the effectiveness of GraphRAG for multi-document summarization may depend on the specific task and dataset, and further research is needed to fully understand its benefits and limitations [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract raises questions about GraphRAG's effectiveness and proposes a benchmark to evaluate it, which is consistent with the claim but does not directly state it.",
+            "cached": true
+          }
+        ],
+        "supported": 1,
+        "partial": 2,
+        "unsupported": 1,
+        "score": 0.5
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "GraphRAG builds a knowledge graph from the corpus via LLM-based entity and relation extraction",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention LLM-based entity and relation extraction.",
+            "cached": true
+          },
+          {
+            "fact": "Leiden or similar hierarchical community detection groups related entities",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention Leiden or hierarchical community detection.",
+            "cached": true
+          },
+          {
+            "fact": "Local-to-global pattern: summarize each community, then summarize the community summaries",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention summarizing each community and then summarizing the community summaries.",
+            "cached": true
+          },
+          {
+            "fact": "Designed for query-focused summarization (QFS) over an entire corpus",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that GraphRAG is useful for query-focused summarization tasks.",
+            "cached": true
+          }
+        ],
+        "present": 1,
+        "partial": 0,
+        "missing": 3,
+        "score": 0.25
+      }
+    },
+    {
+      "question_id": "q04",
+      "regime": "vector-only-no-bridges",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P1",
+            "paperId": "54db6e6bc034c9b37b72f6a1b1ea003a7e8cbd22",
+            "sentence": "Legal RAG systems handle long-form documents and case retrieval through various strategies, including the use of Retrieval-Augmented Generation (RAG) pipelines [P1, P2, P3], which enhance the capabilities of large language models (LLMs) by retrieving knowledge from external databases.",
+            "verdict": "partial",
+            "reasoning": "The abstract discusses RAG and its challenges in the legal domain, but does not explicitly mention handling long-form documents and case retrieval.",
+            "cached": true
+          },
+          {
+            "tag": "P2",
+            "paperId": "67ef9a54914fd9de194deab6e720ea9109dc46d6",
+            "sentence": "Legal RAG systems handle long-form documents and case retrieval through various strategies, including the use of Retrieval-Augmented Generation (RAG) pipelines [P1, P2, P3], which enhance the capabilities of large language models (LLMs) by retrieving knowledge from external databases.",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions using RAG pipelines for information retrieval and response generation, but does not specifically discuss handling long-form documents or case retrieval.",
+            "cached": true
+          },
+          {
+            "tag": "P3",
+            "paperId": "f51e92ce3f63cf04c26374c0ca33a2a751931cf6",
+            "sentence": "Legal RAG systems handle long-form documents and case retrieval through various strategies, including the use of Retrieval-Augmented Generation (RAG) pipelines [P1, P2, P3], which enhance the capabilities of large language models (LLMs) by retrieving knowledge from external databases.",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that RAG enhances LLM capabilities by retrieving knowledge from external databases in the legal domain.",
+            "cached": true
+          },
+          {
+            "tag": "P10",
+            "paperId": "9e015a8524261d4c040c10fa773ddbb02a49ee38",
+            "sentence": "To address the challenge of handling long-form documents, some approaches propose the use of long-context LLMs [P10], while others suggest using context-aware query translators [P7] to adapt retrieval depth and response style based on expertise and specificity.",
+            "verdict": "unsupported",
+            "reasoning": "The abstract discusses the LongRAG framework for handling long-form documents but does not mention context-aware query translators.",
+            "cached": true
+          },
+          {
+            "tag": "P7",
+            "paperId": "1d6d80e00c82fab65adc2428a43ed0e081fd3064",
+            "sentence": "To address the challenge of handling long-form documents, some approaches propose the use of long-context LLMs [P10], while others suggest using context-aware query translators [P7] to adapt retrieval depth and response style based on expertise and specificity.",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions a context-aware query translator that adapts retrieval depth and response style based on expertise and specificity, which is consistent with the claim but does not directly address long-form documents or long-context LLMs.",
+            "cached": true
+          },
+          {
+            "tag": "P5",
+            "paperId": "3daedc1e0a9db8c4dda7e06724b0b556f64c0752",
+            "sentence": "Additionally, benchmarks such as LegalBench-RAG [P5] have been introduced to evaluate the retrieval step of RAG pipelines within the legal space.",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states the introduction of LegalBench-RAG to evaluate the retrieval step of RAG pipelines within the legal space.",
+            "cached": true
+          },
+          {
+            "tag": "P6",
+            "paperId": "81b6398fb61cced922b584cbda7bccf6a5ded5d9",
+            "sentence": "The effectiveness of RAG systems in the legal domain relies heavily on the quality of input provided, particularly when employing RAG techniques [P6].",
+            "verdict": "partial",
+            "reasoning": "The abstract discusses the importance of input quality for RAG techniques in Large Language Models, which is related to but not specifically about RAG systems in the legal domain.",
+            "cached": true
+          }
+        ],
+        "supported": 2,
+        "partial": 4,
+        "unsupported": 1,
+        "score": 0.5714285714285714
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Legal RAG systems use specialized benchmarks like LegalBench-RAG for evaluation",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that benchmarks like LegalBench-RAG are used for evaluation of Legal RAG systems.",
+            "cached": true
+          },
+          {
+            "fact": "Case-based reasoning (CBR-RAG) retrieves analogous prior cases as RAG context",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention Case-based reasoning or CBR-RAG retrieving analogous prior cases as RAG context.",
+            "cached": true
+          },
+          {
+            "fact": "Structural information from legal documents (citations, sections) improves case retrieval",
+            "verdict": "missing",
+            "reasoning": "The answer discusses legal RAG systems and their components but does not mention the role of structural information from legal documents in improving case retrieval.",
+            "cached": true
+          },
+          {
+            "fact": "Reliable retrieval in large legal corpora is a known challenge due to structurally similar documents",
+            "verdict": "missing",
+            "reasoning": "The answer discusses challenges in handling long-form documents but does not mention structurally similar documents as a challenge.",
+            "cached": true
+          }
+        ],
+        "present": 1,
+        "partial": 0,
+        "missing": 3,
+        "score": 0.25
+      }
+    },
+    {
+      "question_id": "q05",
+      "regime": "multi-method-precise",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P1",
+            "paperId": "bdcf7876648d545198fc324455d920155e129d2e",
+            "sentence": "Techniques used for hard negative mining in dense passage retrieval include lexical methods such as BM25 [P1], clustering [P1], and periodically updated dense indices [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract mentions lexical methods, clustering, and periodically updated dense indices as techniques for generating hard negatives.",
+            "cached": true
+          },
+          {
+            "tag": "P1",
+            "paperId": "bdcf7876648d545198fc324455d920155e129d2e",
+            "sentence": "Techniques used for hard negative mining in dense passage retrieval include lexical methods such as BM25 [P1], clustering [P1], and periodically updated dense indices [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract mentions lexical methods, clustering, and periodically updated dense indices as techniques for generating hard negatives.",
+            "cached": true
+          },
+          {
+            "tag": "P1",
+            "paperId": "bdcf7876648d545198fc324455d920155e129d2e",
+            "sentence": "Techniques used for hard negative mining in dense passage retrieval include lexical methods such as BM25 [P1], clustering [P1], and periodically updated dense indices [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract mentions lexical methods, clustering, and periodically updated dense indices as techniques for generating hard negatives.",
+            "cached": true
+          },
+          {
+            "tag": "P3",
+            "paperId": "6aa7fb4db6dcfba612976efa9bceac4696b21699",
+            "sentence": "Additionally, various negative sampling methods have been proposed, such as the quasi-triangular principle [P3] and the use of more and higher-quality negative examples [P4].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions the quasi-triangular principle but does not discuss the use of more and higher-quality negative examples.",
+            "cached": false
+          },
+          {
+            "tag": "P4",
+            "paperId": "9191ba72195b2074dcf2f900d607f2390ff5bcf6",
+            "sentence": "Additionally, various negative sampling methods have been proposed, such as the quasi-triangular principle [P3] and the use of more and higher-quality negative examples [P4].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions the use of more and higher-quality negative examples, but does not specifically mention the quasi-triangular principle.",
+            "cached": false
+          },
+          {
+            "tag": "P2",
+            "paperId": "67b583682c35cfb6fed37ca65f6458aa55285bce",
+            "sentence": "Hard negative mining can also be employed in conjunction with other techniques, such as cross-encoder distillation and further pre-training [P2].",
+            "verdict": "supported",
+            "reasoning": "The abstract mentions hard negative mining, cross-encoder distillation, and further pre-training as previous solutions.",
+            "cached": false
+          },
+          {
+            "tag": "P10",
+            "paperId": "5bba7776f70edb9408a6fb38c0cfb1f2140d1f04",
+            "sentence": "Furthermore, techniques like universal embedding optimization strategy and image verbalization method have been proposed for learning a unified embedding space for multi-modal retrieval [P10].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly mentions the two techniques proposed for learning a unified embedding space for multi-modal retrieval.",
+            "cached": false
+          }
+        ],
+        "supported": 5,
+        "partial": 2,
+        "unsupported": 0,
+        "score": 0.8571428571428571
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "BM25-based hard negatives are a common baseline approach",
+            "verdict": "present",
+            "reasoning": "The answer mentions BM25 as a technique used for hard negative mining.",
+            "cached": false
+          },
+          {
+            "fact": "Multi-stage sampling like TriSampler uses different principles for negative selection",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention multi-stage sampling or TriSampler.",
+            "cached": false
+          },
+          {
+            "fact": "Hard negatives matter for cross-lingual and multilingual dense retrieval",
+            "verdict": "missing",
+            "reasoning": "The answer discusses hard negative mining but does not explicitly mention its importance for cross-lingual and multilingual dense retrieval.",
+            "cached": false
+          },
+          {
+            "fact": "Better negatives improve embedding quality (Conan-embedding)",
+            "verdict": "partial",
+            "reasoning": "The answer mentions the use of high-quality negative examples, which is related to the concept of better negatives improving embedding quality.",
+            "cached": false
+          }
+        ],
+        "present": 1,
+        "partial": 1,
+        "missing": 2,
+        "score": 0.375
+      }
+    },
+    {
+      "question_id": "q06",
+      "regime": "single-method-specific",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P2",
+            "paperId": "7659a9e23031671a51c702c337d94d7c70d0ed25",
+            "sentence": "Knowledge graphs are integrated into RAG pipelines for question answering through various approaches, including the use of graph retrieval tools [P2], constructing individual knowledge graphs for each document [P5], and incorporating structured knowledge graphs into traditional RAG architectures [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions integrating graph retrieval tools with Large Language Models for question answering, which is related to the claim but does not explicitly describe the various approaches mentioned.",
+            "cached": false
+          },
+          {
+            "tag": "P5",
+            "paperId": "0b28b36ba158c4cf42a15b3b7af55452a720de2a",
+            "sentence": "Knowledge graphs are integrated into RAG pipelines for question answering through various approaches, including the use of graph retrieval tools [P2], constructing individual knowledge graphs for each document [P5], and incorporating structured knowledge graphs into traditional RAG architectures [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions constructing individual knowledge graphs for each document and integrating them into a unified graph, which is one of the approaches mentioned in the claim.",
+            "cached": false
+          },
+          {
+            "tag": "P9",
+            "paperId": "cc7d79a5e28451602301327b81648577ede9aa94",
+            "sentence": "Knowledge graphs are integrated into RAG pipelines for question answering through various approaches, including the use of graph retrieval tools [P2], constructing individual knowledge graphs for each document [P5], and incorporating structured knowledge graphs into traditional RAG architectures [P9].",
+            "verdict": "partial",
+            "reasoning": "The abstract supports one of the approaches mentioned in the claim, specifically incorporating structured knowledge graphs into traditional RAG architectures.",
+            "cached": false
+          },
+          {
+            "tag": "P7",
+            "paperId": "26702869774950e03b10a3657bca0621aa0d8d07",
+            "sentence": "The integration of knowledge graphs enhances the knowledge capabilities of Large Language Model Agents (LMAs) [P7] and improves the accuracy and knowledge consistency of generated content [P9].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that integrating knowledge graphs enhances the knowledge capabilities of LMAs.",
+            "cached": false
+          },
+          {
+            "tag": "P9",
+            "paperId": "cc7d79a5e28451602301327b81648577ede9aa94",
+            "sentence": "The integration of knowledge graphs enhances the knowledge capabilities of Large Language Model Agents (LMAs) [P7] and improves the accuracy and knowledge consistency of generated content [P9].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that integrating knowledge graphs improves the accuracy and knowledge consistency of generated content.",
+            "cached": false
+          },
+          {
+            "tag": "P10",
+            "paperId": "336605fc899aab6c5b375d1129bf656d246b9013",
+            "sentence": "Additionally, graph neural networks (GNNs) can be used to handle complex graph information stored in knowledge graphs [P10].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that GNNs can handle complex graph information stored in knowledge graphs.",
+            "cached": false
+          },
+          {
+            "tag": "P6",
+            "paperId": "1eeb68f33eac8a914e0065ed29eef8292fde3fa7",
+            "sentence": "The KA-RAG framework integrates a structured Knowledge Graph (KG) with an Agentic Retrieval-Augmented Generation (Agentic-RAG) workflow [P6], while the Document GraphRAG framework incorporates Knowledge Graphs (KGs) built upon a document\u2019s intrinsic structure into the RAG pipeline [P8].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that KA-RAG integrates a structured Knowledge Graph with an Agentic-RAG workflow.",
+            "cached": false
+          },
+          {
+            "tag": "P8",
+            "paperId": "57b47dfb87d2c9a6e10cd7182bc0e767aad1ae45",
+            "sentence": "The KA-RAG framework integrates a structured Knowledge Graph (KG) with an Agentic Retrieval-Augmented Generation (Agentic-RAG) workflow [P6], while the Document GraphRAG framework incorporates Knowledge Graphs (KGs) built upon a document\u2019s intrinsic structure into the RAG pipeline [P8].",
+            "verdict": "partial",
+            "reasoning": "The abstract supports the part of the claim about Document GraphRAG framework but does not mention the KA-RAG framework.",
+            "cached": false
+          }
+        ],
+        "supported": 4,
+        "partial": 4,
+        "unsupported": 0,
+        "score": 0.75
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "KG-as-prompt approaches like Knowledge Graph Prompting use graph structure in the prompt",
+            "verdict": "missing",
+            "reasoning": "The answer discusses knowledge graphs and their integration into various architectures, but does not mention using graph structure in the prompt.",
+            "cached": false
+          },
+          {
+            "fact": "GNN-RAG uses graph neural networks for KG retrieval",
+            "verdict": "partial",
+            "reasoning": "The answer mentions graph neural networks and knowledge graphs, but does not explicitly state that GNN-RAG uses them for KG retrieval.",
+            "cached": false
+          },
+          {
+            "fact": "Combining KG with LLMs improves multi-hop reasoning",
+            "verdict": "present",
+            "reasoning": "The answer states that integrating knowledge graphs enhances the knowledge capabilities of Large Language Model Agents and improves the accuracy of generated content.",
+            "cached": false
+          },
+          {
+            "fact": "The roles of graphs vs LLMs in KG-QA are an active research area",
+            "verdict": "missing",
+            "reasoning": "The answer discusses the integration of knowledge graphs with LLMs but does not mention that the roles of graphs vs LLMs in KG-QA are an active research area.",
+            "cached": false
+          }
+        ],
+        "present": 1,
+        "partial": 1,
+        "missing": 2,
+        "score": 0.375
+      }
+    },
+    {
+      "question_id": "q07",
+      "regime": "single-paper-focused",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P5",
+            "paperId": "cfce709a65f90312d2bdc1a6cf0380c19becf694",
+            "sentence": "RAGTruth is a hallucination corpus for developing trustworthy retrieval-augmented language models [P5].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that RAGTruth is a corpus for analyzing hallucinations in RAG frameworks for LLM applications.",
+            "cached": false
+          },
+          {
+            "tag": "P5",
+            "paperId": "cfce709a65f90312d2bdc1a6cf0380c19becf694",
+            "sentence": "The corpus is designed to measure the extent of hallucination in RAG systems, which is essential for evaluating their performance and trustworthiness [P5].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that the corpus is designed to measure the extent of hallucination in RAG systems.",
+            "cached": false
+          }
+        ],
+        "supported": 2,
+        "partial": 0,
+        "unsupported": 0,
+        "score": 1.0
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "RAGTruth is a hallucination corpus for RAG systems",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that RAGTruth is a hallucination corpus for RAG systems.",
+            "cached": false
+          },
+          {
+            "fact": "It contains word-level hallucination annotations",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that RAGTruth is used to analyze word-level hallucinations.",
+            "cached": false
+          },
+          {
+            "fact": "Covers multiple RAG tasks (QA, summarization, data-to-text)",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention that RAG covers multiple tasks like QA, summarization, and data-to-text.",
+            "cached": false
+          },
+          {
+            "fact": "Used for training and evaluating hallucination detectors",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention using the corpus for training and evaluating hallucination detectors.",
+            "cached": false
+          }
+        ],
+        "present": 2,
+        "partial": 0,
+        "missing": 2,
+        "score": 0.5
+      }
+    },
+    {
+      "question_id": "q08",
+      "regime": "multi-method",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P1",
+            "paperId": "0b374b43c171bc63935e2b01147dcb1857cb56d3",
+            "sentence": "Several approaches combine BM25 with dense retrieval for hybrid search, including the hybrid retrieval module proposed in [P1], which grounds Large Language Model (LLM) responses with external knowledge.",
+            "verdict": "supported",
+            "reasoning": "The abstract directly mentions a proposed hybrid retrieval module that combines sparse and dense retrieval approaches.",
+            "cached": false
+          },
+          {
+            "tag": "P3",
+            "paperId": "a2e8bdc2502dda22e9351fd47cb32ceaf07c5bd5",
+            "sentence": "Another approach is the COS-Mix strategy [P3], which integrates cosine similarity and cosine distance measures to improve retrieval performance.",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states the integration of cosine similarity and cosine distance measures to improve retrieval performance.",
+            "cached": false
+          },
+          {
+            "tag": "P5",
+            "paperId": "4e57d2fa070c8c9e2f36341c5f86e35b6ca33f2c",
+            "sentence": "Additionally, the Dynamic Alpha Tuning (DAT) framework [P5] dynamically balances dense retrieval and BM25 for each query, and the hybrid retrieval mechanism in [P6] combines vector-based similarity search with BM25.",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that DAT dynamically balances dense retrieval and BM25 for each query.",
+            "cached": false
+          },
+          {
+            "tag": "P6",
+            "paperId": "61e0555f4767a24eb9e6deab145586e715c4366d",
+            "sentence": "Additionally, the Dynamic Alpha Tuning (DAT) framework [P5] dynamically balances dense retrieval and BM25 for each query, and the hybrid retrieval mechanism in [P6] combines vector-based similarity search with BM25.",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions a hybrid retrieval mechanism combining vector-based similarity search with BM25, but does not specifically discuss Dynamic Alpha Tuning.",
+            "cached": false
+          },
+          {
+            "tag": "P7",
+            "paperId": "da0b29c1f5d6d7fdb575023d62416e3751314a98",
+            "sentence": "Furthermore, [P7] shows that a hybrid approach combining a fine-tuned dense retriever with keyword-based sparse search methods, including BM25, significantly enhances performance in domain-specific question answering.",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that a hybrid approach combining a fine-tuned dense retriever with keyword-based sparse search methods significantly enhances performance.",
+            "cached": false
+          }
+        ],
+        "supported": 4,
+        "partial": 1,
+        "unsupported": 0,
+        "score": 0.9
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Hybrid search combines sparse BM25 with dense neural retrievers",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that hybrid search combines BM25 with dense neural retrievers.",
+            "cached": false
+          },
+          {
+            "fact": "Reciprocal Rank Fusion (RRF) is a common fusion method",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention Reciprocal Rank Fusion.",
+            "cached": false
+          },
+          {
+            "fact": "Dynamic alpha tuning (DAT) adjusts the BM25/dense weight per query",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that Dynamic Alpha Tuning adjusts the balance between dense retrieval and BM25 per query.",
+            "cached": false
+          },
+          {
+            "fact": "Hybrid retrieval often outperforms either method alone, especially for out-of-domain queries",
+            "verdict": "present",
+            "reasoning": "The answer states that a hybrid approach combining dense retrieval and BM25 significantly enhances performance, especially in domain-specific question answering.",
+            "cached": false
+          }
+        ],
+        "present": 3,
+        "partial": 0,
+        "missing": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "question_id": "q09",
+      "regime": "multi-method",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P3",
+            "paperId": "6995a0944b83be2c180ad9aa9461eed801ee9f8a",
+            "sentence": "Approaches that use specialized code embeddings for retrieval-augmented code generation include CodeR [P3], CodeXEmbed [P5], and CONAN-R [P4].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions CodeR, but does not explicitly mention CodeXEmbed or CONAN-R.",
+            "cached": false
+          },
+          {
+            "tag": "P5",
+            "paperId": "d20022af3498343684f1105e614a4c03f4afdfd5",
+            "sentence": "Approaches that use specialized code embeddings for retrieval-augmented code generation include CodeR [P3], CodeXEmbed [P5], and CONAN-R [P4].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions CodeXEmbed as a code embedding model but does not explicitly state its use for retrieval-augmented code generation alongside other specific models like CodeR and CONAN-R.",
+            "cached": false
+          },
+          {
+            "tag": "P4",
+            "paperId": "a1d2a932f638ac3ccd39a83d08dcfe6c229dad95",
+            "sentence": "Approaches that use specialized code embeddings for retrieval-augmented code generation include CodeR [P3], CodeXEmbed [P5], and CONAN-R [P4].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions CONAN-R, which is one of the approaches listed in the claim, but does not explicitly mention CodeR or CodeXEmbed.",
+            "cached": false
+          },
+          {
+            "tag": "P3",
+            "paperId": "6995a0944b83be2c180ad9aa9461eed801ee9f8a",
+            "sentence": "CodeR is a state-of-the-art embedding model for general-purpose code retrieval [P3], while CodeXEmbed is a family of large-scale code embedding models [P5].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that CodeR is a state-of-the-art embedding model for general-purpose code retrieval.",
+            "cached": false
+          },
+          {
+            "tag": "P5",
+            "paperId": "d20022af3498343684f1105e614a4c03f4afdfd5",
+            "sentence": "CodeR is a state-of-the-art embedding model for general-purpose code retrieval [P3], while CodeXEmbed is a family of large-scale code embedding models [P5].",
+            "verdict": "partial",
+            "reasoning": "The abstract supports the claim about CodeXEmbed but does not mention CodeR.",
+            "cached": false
+          },
+          {
+            "tag": "P4",
+            "paperId": "a1d2a932f638ac3ccd39a83d08dcfe6c229dad95",
+            "sentence": "CONAN-R is a code structure-aware retriever that pretrains CodeT5 using Code-Documentation Alignment [P4].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that CONAN-R pretrains CodeT5 using Code-Documentation Alignment.",
+            "cached": false
+          },
+          {
+            "tag": "P6",
+            "paperId": "d92a423e09804595c8a2e241f890f5a24d326bb5",
+            "sentence": "Other approaches, such as Prompt-Based Code Completion via Multi-Retrieval Augmented Generation [P6] and Retrieval-augmented code completion for local projects using large language models [P7], also utilize retrieval-augmented generation techniques to enhance code completion and generation tasks.",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention the specific approaches or papers [P6] and [P7] referenced in the claim.",
+            "cached": false
+          },
+          {
+            "tag": "P7",
+            "paperId": "0c0b4f402e9b0e81073f946ff0e7cfe5f7145e44",
+            "sentence": "Other approaches, such as Prompt-Based Code Completion via Multi-Retrieval Augmented Generation [P6] and Retrieval-augmented code completion for local projects using large language models [P7], also utilize retrieval-augmented generation techniques to enhance code completion and generation tasks.",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention other approaches like Prompt-Based Code Completion via Multi-Retrieval Augmented Generation or Retrieval-augmented code completion for local projects.",
+            "cached": false
+          }
+        ],
+        "supported": 2,
+        "partial": 4,
+        "unsupported": 2,
+        "score": 0.5
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Specialized code embedding models like CodeXEmbed are trained for code retrieval",
+            "verdict": "present",
+            "reasoning": "The answer explicitly mentions CodeXEmbed as a specialized code embedding model for code retrieval.",
+            "cached": false
+          },
+          {
+            "fact": "CodeRAG-Bench is a benchmark for evaluating retrieval-augmented code generation",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention CodeRAG-Bench as a benchmark for evaluating retrieval-augmented code generation.",
+            "cached": false
+          },
+          {
+            "fact": "Repository-level retrieval matters more than file-level for many tasks",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention the relative importance of repository-level versus file-level retrieval.",
+            "cached": false
+          },
+          {
+            "fact": "Structural chunking of code (AST-based) outperforms naive text chunking",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention structural chunking of code or compare it to naive text chunking.",
+            "cached": false
+          }
+        ],
+        "present": 1,
+        "partial": 0,
+        "missing": 3,
+        "score": 0.25
+      }
+    },
+    {
+      "question_id": "q10",
+      "regime": "vector-only-no-bridges",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P8",
+            "paperId": "615ac174673a078411063efcbfb5d9c7117dd9e4",
+            "sentence": "Medical and biomedical RAG systems integrate clinical knowledge bases through various methods, including the use of retrieval-augmented generation to enhance large language models [P8].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that RAG enhances large language models by integrating external data sources, which aligns with the claim about integrating clinical knowledge bases.",
+            "cached": false
+          },
+          {
+            "tag": "P1",
+            "paperId": "f185c99b0af3d7598f751ad977b1898ebcd05c33",
+            "sentence": "For instance, DoctorRAG, a RAG framework, emulates doctor-like reasoning by integrating both explicit clinical knowledge and implicit case-based experience [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that DoctorRAG integrates explicit clinical knowledge and implicit case-based experience to emulate doctor-like reasoning.",
+            "cached": false
+          },
+          {
+            "tag": "P2",
+            "paperId": "ce75878fa575896a3811d84fddbcf2da96fcecce",
+            "sentence": "The Multi-Round Diagnostic RAG Framework addresses the semantic gap between colloquial patient descriptions and professional terminology within medical knowledge bases [P2].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that the Multi-Round Diagnostic RAG Framework addresses the semantic gap between colloquial patient descriptions and professional terminology within medical knowledge bases.",
+            "cached": false
+          },
+          {
+            "tag": "P3",
+            "paperId": "531abcf7be2d58b45e57f3099728b9e2b02ea937",
+            "sentence": "REALM, another approach, incorporates external knowledge from knowledge graphs to improve clinical predictive capabilities [P3].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that REALM incorporates external knowledge from knowledge graphs to improve clinical predictive capabilities.",
+            "cached": false
+          },
+          {
+            "tag": "P4",
+            "paperId": "0f1f79e1f01362e2778875de6c4ef1484a0f6263",
+            "sentence": "A Novel RAG Framework with Knowledge-Enhancement for Biomedical Question Answering proposes the RAG-Chain framework to enhance the performance of general-domain large models on special biomedical reasoning and question-answering tasks [P4].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states the proposal of the RAG-Chain framework for enhancing performance on biomedical reasoning and question-answering tasks.",
+            "cached": false
+          },
+          {
+            "tag": "P8",
+            "paperId": "615ac174673a078411063efcbfb5d9c7117dd9e4",
+            "sentence": "These systems aim to improve diagnostic accuracy, clinical decision support, and patient care by leveraging retrieval-augmented generation [P8, P9, P10].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that RAG aims to improve diagnostic accuracy, clinical decision support, and patient care in medical applications.",
+            "cached": false
+          },
+          {
+            "tag": "P9",
+            "paperId": "4cc6e550ff3effb1e778f5707c82f2782de5b920",
+            "sentence": "These systems aim to improve diagnostic accuracy, clinical decision support, and patient care by leveraging retrieval-augmented generation [P8, P9, P10].",
+            "verdict": "supported",
+            "reasoning": "The abstract mentions improving diagnostic support, which aligns with the claim of improving diagnostic accuracy and clinical decision support.",
+            "cached": false
+          },
+          {
+            "tag": "P10",
+            "paperId": "83939671534dc3d374c9bc4e3e03b5ec2c7ba301",
+            "sentence": "These systems aim to improve diagnostic accuracy, clinical decision support, and patient care by leveraging retrieval-augmented generation [P8, P9, P10].",
+            "verdict": "partial",
+            "reasoning": "The abstract implies improvement in clinical settings but does not directly state the aim of improving diagnostic accuracy, clinical decision support, and patient care.",
+            "cached": false
+          }
+        ],
+        "supported": 7,
+        "partial": 1,
+        "unsupported": 0,
+        "score": 0.9375
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Medical RAG systems integrate clinical knowledge bases such as UMLS or PubMed",
+            "verdict": "missing",
+            "reasoning": "The answer mentions integrating clinical knowledge bases but does not specifically mention UMLS or PubMed.",
+            "cached": false
+          },
+          {
+            "fact": "Domain-adapted embeddings improve biomedical retrieval over general-purpose models",
+            "verdict": "missing",
+            "reasoning": "The answer discusses various biomedical RAG systems but does not mention domain-adapted embeddings or their impact on biomedical retrieval.",
+            "cached": false
+          },
+          {
+            "fact": "RAG reduces hallucinations in clinical settings vs vanilla LLMs",
+            "verdict": "missing",
+            "reasoning": "The answer discusses various RAG systems and their applications in clinical settings, but does not explicitly state that RAG reduces hallucinations compared to vanilla LLMs.",
+            "cached": false
+          },
+          {
+            "fact": "Surveys document RAG applications across healthcare, biomedicine, and clinical decision support",
+            "verdict": "present",
+            "reasoning": "The answer clearly states RAG applications in healthcare, biomedicine, and clinical decision support.",
+            "cached": false
+          }
+        ],
+        "present": 1,
+        "partial": 0,
+        "missing": 3,
+        "score": 0.25
+      }
+    },
+    {
+      "question_id": "q11",
+      "regime": "single-method-specific",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P1",
+            "paperId": "f5e9e5bbe22f0263be1f1ce88c66978a2b927772",
+            "sentence": "RAGAS (Retrieval Augmented Generation Assessment) is a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that RAGAs is a framework for reference-free evaluation of RAG pipelines.",
+            "cached": false
+          },
+          {
+            "tag": "P1",
+            "paperId": "f5e9e5bbe22f0263be1f1ce88c66978a2b927772",
+            "sentence": "It is used to evaluate the performance of RAG systems, which are composed of a retrieval and an LLM-based generation module [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that RAG systems are composed of a retrieval and an LLM-based generation module.",
+            "cached": false
+          },
+          {
+            "tag": "P3",
+            "paperId": "41186229ac24cebe1b40740417b0320293fa85a5",
+            "sentence": "The metrics used by RAGAS to evaluate retrieval-augmented generation include faithfulness, relevancy, correctness, and context precision [P3].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that the evaluation utilizes RAGAS metrics including faithfulness, relevancy, correctness, and context precision.",
+            "cached": false
+          },
+          {
+            "tag": "P2",
+            "paperId": "58549ff432aa1c176eec8a2c81e75af676cb4b10",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that RAGAS is a publicly available library that uses LLMs for evaluation.",
+            "cached": false
+          },
+          {
+            "tag": "P3",
+            "paperId": "41186229ac24cebe1b40740417b0320293fa85a5",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention RAGAS as a publicly available library or its use in various studies.",
+            "cached": false
+          },
+          {
+            "tag": "P4",
+            "paperId": "b71141dbd0e4827156c696e05ba1fa068ad43ee1",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention RAGAS as a publicly available library or its use in various studies.",
+            "cached": false
+          },
+          {
+            "tag": "P5",
+            "paperId": "f1bf351292be87b1a32ce8fd74d7e2eb23983e39",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention RAGAS as a publicly available library or its use in various studies.",
+            "cached": false
+          },
+          {
+            "tag": "P6",
+            "paperId": "be299fb19829f9a26e8edbad5583859bd962dc99",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention RAGAS as a publicly available library or its utilization in various studies.",
+            "cached": false
+          },
+          {
+            "tag": "P7",
+            "paperId": "fb15b5be005ed93263e2968bc741c47f3a663e8a",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract mentions RAGAS as a framework for evaluation, but does not state that it is a publicly available library or that it has been used in various studies.",
+            "cached": false
+          },
+          {
+            "tag": "P8",
+            "paperId": "2668d28c28400715f87f1b52002df2fa1efc1335",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention RAGAS as a publicly available library or its utilization in various studies.",
+            "cached": false
+          },
+          {
+            "tag": "P9",
+            "paperId": "66d48e5d29d4ed7d1904324b36923d7a25492411",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions RAG Assessment (Ragas) as one of the LLM evaluation methods, but does not explicitly state that RAGAS is a publicly available library.",
+            "cached": false
+          },
+          {
+            "tag": "P10",
+            "paperId": "2808681bd06507cb0bb49da76bb15d0997d8efb3",
+            "sentence": "RAGAS is a publicly available library that uses LLMs for evaluation [P2], and it has been utilized in various studies to assess the performance of RAG systems in different domains [P3, P4, P5, P6, P7, P8, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention RAGAS as a publicly available library or its utilization in various studies.",
+            "cached": false
+          }
+        ],
+        "supported": 4,
+        "partial": 1,
+        "unsupported": 7,
+        "score": 0.375
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "RAGAS is an automated RAG evaluation framework",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that RAGAS is a framework for evaluating RAG pipelines.",
+            "cached": false
+          },
+          {
+            "fact": "It provides reference-free metrics including faithfulness, answer relevancy, and context relevancy",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that RAGAS provides metrics including faithfulness and relevancy, which aligns with the expected fact.",
+            "cached": false
+          },
+          {
+            "fact": "Uses LLM-as-judge to score generated answers",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that RAGAS uses LLMs for evaluation.",
+            "cached": false
+          },
+          {
+            "fact": "Designed to enable RAG hyperparameter tuning without human-labeled data",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention hyperparameter tuning or the use of RAGAS for this purpose.",
+            "cached": false
+          }
+        ],
+        "present": 3,
+        "partial": 0,
+        "missing": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "question_id": "q12",
+      "regime": "multi-method",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P2",
+            "paperId": "0c66a6125fcc2e397f9218795ca5d29b2474810d",
+            "sentence": "Cross-encoder rerankers are combined with bi-encoder dense retrievers in RAG pipelines by first using the bi-encoder dense retriever to retrieve a set of relevant passages, and then using the cross-encoder reranker to re-rank these passages based on their relevance to the input query [P2, P3].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention combining cross-encoder rerankers with bi-encoder dense retrievers in RAG pipelines.",
+            "cached": false
+          },
+          {
+            "tag": "P3",
+            "paperId": "0b7355e6331754bf5f3880157ccfaafc15bcdc52",
+            "sentence": "Cross-encoder rerankers are combined with bi-encoder dense retrievers in RAG pipelines by first using the bi-encoder dense retriever to retrieve a set of relevant passages, and then using the cross-encoder reranker to re-rank these passages based on their relevance to the input query [P2, P3].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions a reranking stage using a cross-encoder model, but does not explicitly describe the combination with bi-encoder dense retrievers.",
+            "cached": false
+          },
+          {
+            "tag": "P1",
+            "paperId": "41186229ac24cebe1b40740417b0320293fa85a5",
+            "sentence": "The use of dynamic chunking and optimized vector search can further improve the performance of the RAG pipeline [P1].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions dynamic chunking but not optimized vector search, and implies performance improvement.",
+            "cached": false
+          }
+        ],
+        "supported": 0,
+        "partial": 2,
+        "unsupported": 1,
+        "score": 0.3333333333333333
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Two-stage pipeline: bi-encoder retrieves candidates, cross-encoder reranks the top-K",
+            "verdict": "present",
+            "reasoning": "The answer clearly describes a two-stage pipeline with a bi-encoder retrieving candidates and a cross-encoder reranking them.",
+            "cached": false
+          },
+          {
+            "fact": "Bi-encoders are fast but less precise; cross-encoders are precise but slow",
+            "verdict": "partial",
+            "reasoning": "The answer implies the trade-off between bi-encoders and cross-encoders but does not explicitly state their characteristics.",
+            "cached": false
+          },
+          {
+            "fact": "This trade-off motivates the two-stage architecture",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention a trade-off motivating a two-stage architecture.",
+            "cached": false
+          },
+          {
+            "fact": "Distillation from cross-encoder to bi-encoder is one approach to improve efficiency",
+            "verdict": "missing",
+            "reasoning": "The answer discusses combining cross-encoder and bi-encoder but does not mention distillation for efficiency improvement.",
+            "cached": false
+          }
+        ],
+        "present": 1,
+        "partial": 1,
+        "missing": 2,
+        "score": 0.375
+      }
+    },
+    {
+      "question_id": "q13",
+      "regime": "multi-method",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P3",
+            "paperId": "5c32c653735b43a0a8923ca65ac191bd4bf15311",
+            "sentence": "HyDE differs from query expansion approaches like Query2Doc in that it uses Hypothetical Document Embeddings to generate a hypothetical document that captures relevance patterns, rather than expanding the query with generated pseudo-documents [P3].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that HyDE uses Hypothetical Document Embeddings to generate a hypothetical document that captures relevance patterns.",
+            "cached": false
+          },
+          {
+            "tag": "P1",
+            "paperId": "ccc772d88c231275f24c4fac9b28bbe0942e1107",
+            "sentence": "In contrast, Query2Doc expands the query with pseudo-documents generated by large language models [P1].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly states that query2doc expands the query with pseudo-documents generated by large language models.",
+            "cached": false
+          },
+          {
+            "tag": "P6",
+            "paperId": "77c04df3902feb3a89717d69df30f1a0100f1560",
+            "sentence": "While both approaches aim to improve retrieval performance, HyDE's focus on hypothetical document embeddings sets it apart from traditional query expansion methods [P6, P7].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not compare HyDE to traditional query expansion methods.",
+            "cached": false
+          },
+          {
+            "tag": "P7",
+            "paperId": "056e4171d92f99a3776342da58c0a194405f17f7",
+            "sentence": "While both approaches aim to improve retrieval performance, HyDE's focus on hypothetical document embeddings sets it apart from traditional query expansion methods [P6, P7].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention HyDE's focus on hypothetical document embeddings or compare it to traditional query expansion methods.",
+            "cached": false
+          }
+        ],
+        "supported": 2,
+        "partial": 0,
+        "unsupported": 2,
+        "score": 0.5
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "HyDE generates a hypothetical document via LLM, embeds it, retrieves on that embedding",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that HyDE generates a hypothetical document and uses its embedding for retrieval.",
+            "cached": false
+          },
+          {
+            "fact": "Query2Doc generates pseudo-documents from the query and concatenates to the original query",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that Query2Doc generates pseudo-documents and expands the query with them.",
+            "cached": false
+          },
+          {
+            "fact": "HyDE is zero-shot and does not require relevance labels",
+            "verdict": "present",
+            "reasoning": "The answer clearly states that HyDE is zero-shot and does not require relevance labels.",
+            "cached": false
+          },
+          {
+            "fact": "Both leverage LLMs to bridge the query-document vocabulary gap",
+            "verdict": "missing",
+            "reasoning": "The answer does not mention both approaches leveraging LLMs to bridge the query-document vocabulary gap.",
+            "cached": false
+          }
+        ],
+        "present": 3,
+        "partial": 0,
+        "missing": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "question_id": "q14",
+      "regime": "vector-only-no-bridges",
+      "retriever": "dual",
+      "confidence": "high",
+      "faithfulness": {
+        "claims": [
+          {
+            "tag": "P2",
+            "paperId": "cc844e3377f4af175881707774f266d140741ca9",
+            "sentence": "Several techniques exist for cross-lingual and multilingual retrieval-augmented generation, including XRAG [P2], a novel benchmark designed to evaluate the generation abilities of LLMs in cross-lingual RAG settings, and multilingual RAG strategies such as question-translation (tRAG) [P3].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly mentions XRAG as a benchmark for cross-lingual RAG settings.",
+            "cached": false
+          },
+          {
+            "tag": "P3",
+            "paperId": "d37a967a9348af87d03a12ba04845644bfcab6c2",
+            "sentence": "Several techniques exist for cross-lingual and multilingual retrieval-augmented generation, including XRAG [P2], a novel benchmark designed to evaluate the generation abilities of LLMs in cross-lingual RAG settings, and multilingual RAG strategies such as question-translation (tRAG) [P3].",
+            "verdict": "partial",
+            "reasoning": "The abstract mentions multilingual RAG strategies including question-translation, but does not explicitly mention XRAG or a benchmark for evaluating LLMs in cross-lingual RAG settings.",
+            "cached": false
+          },
+          {
+            "tag": "P4",
+            "paperId": "9a3d1d1a1c00feb6c7cbe0e488eff57c606463c9",
+            "sentence": "Additionally, retrieval-augmented generation in multilingual settings (mRAG) has been explored [P4], and techniques like cross-lingual query generation have been proposed to augment passage representations [P5].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly mentions exploring retrieval-augmented generation in multilingual settings, referred to as mRAG.",
+            "cached": false
+          },
+          {
+            "tag": "P5",
+            "paperId": "2157a00d97636599f4b6060e43d81d8d50b8c7f5",
+            "sentence": "Additionally, retrieval-augmented generation in multilingual settings (mRAG) has been explored [P4], and techniques like cross-lingual query generation have been proposed to augment passage representations [P5].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly mentions using cross-lingual query generation to augment passage representations.",
+            "cached": false
+          },
+          {
+            "tag": "P6",
+            "paperId": "1c62647bb8971105c77c1d642991cb1b92a52214",
+            "sentence": "Other approaches include retrieval-augmented multilingual keyphrase generation with retriever-generator iterative training [P6], and multilingual retrieval augmented generation for culturally-sensitive tasks [P8].",
+            "verdict": "supported",
+            "reasoning": "The abstract directly mentions a retrieval-augmented method for multilingual keyphrase generation with a retriever-generator iterative training algorithm.",
+            "cached": false
+          },
+          {
+            "tag": "P8",
+            "paperId": "20f62276e676f8f68e1b6ecbdf20f8dbdd0a3b4a",
+            "sentence": "Other approaches include retrieval-augmented multilingual keyphrase generation with retriever-generator iterative training [P6], and multilingual retrieval augmented generation for culturally-sensitive tasks [P8].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract discusses retrieval-augmented generation but does not mention keyphrase generation or culturally-sensitive tasks as described in the claim.",
+            "cached": false
+          },
+          {
+            "tag": "P7",
+            "paperId": "e6770e3f5e74210c6863aaeed527ac4c1da419d7",
+            "sentence": "These techniques aim to improve the performance of LLMs in multilingual settings and mitigate the challenges associated with cross-lingual retrieval [P7, P9, P10].",
+            "verdict": "unsupported",
+            "reasoning": "The abstract does not mention improving performance in multilingual settings or cross-lingual retrieval.",
+            "cached": false
+          },
+          {
+            "tag": "P9",
+            "paperId": "7e3f1e4b89e3caa64f9d402d5beed60b3ba708f4",
+            "sentence": "These techniques aim to improve the performance of LLMs in multilingual settings and mitigate the challenges associated with cross-lingual retrieval [P7, P9, P10].",
+            "verdict": "partial",
+            "reasoning": "The abstract discusses improving LLM performance in multilingual settings but does not explicitly mention cross-lingual retrieval.",
+            "cached": false
+          },
+          {
+            "tag": "P10",
+            "paperId": "42b4c8cf2f4f28d47ff0ad1c7c5aa18e66852919",
+            "sentence": "These techniques aim to improve the performance of LLMs in multilingual settings and mitigate the challenges associated with cross-lingual retrieval [P7, P9, P10].",
+            "verdict": "partial",
+            "reasoning": "The abstract discusses challenges and techniques related to multilingual settings and cross-lingual retrieval, but does not directly state the claim about improving LLM performance.",
+            "cached": false
+          }
+        ],
+        "supported": 4,
+        "partial": 3,
+        "unsupported": 2,
+        "score": 0.6111111111111112
+      },
+      "coverage": {
+        "facts": [
+          {
+            "fact": "Multilingual dense retrievers like mDPR are used for cross-lingual RAG",
+            "verdict": "missing",
+            "reasoning": "The answer discusses various techniques for cross-lingual and multilingual retrieval-augmented generation but does not mention multilingual dense retrievers like mDPR.",
+            "cached": false
+          },
+          {
+            "fact": "Language drift and language preference are known issues in multilingual RAG",
+            "verdict": "missing",
+            "reasoning": "The answer discusses various techniques for multilingual RAG but does not mention language drift or language preference as known issues.",
+            "cached": false
+          },
+          {
+            "fact": "Culturally-sensitive queries require special handling beyond translation",
+            "verdict": "present",
+            "reasoning": "The answer mentions culturally-sensitive tasks requiring special handling.",
+            "cached": false
+          },
+          {
+            "fact": "Performance varies significantly across language pairs (not all languages are equal)",
+            "verdict": "missing",
+            "reasoning": "The answer discusses various techniques for multilingual retrieval-augmented generation but does not mention performance variation across language pairs.",
+            "cached": false
+          }
+        ],
+        "present": 1,
+        "partial": 0,
+        "missing": 3,
+        "score": 0.25
+      }
+    }
+  ]
+}

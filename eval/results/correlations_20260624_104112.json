@@ -1,0 +1,111 @@
+{
+  "timestamp": "20260624_104112",
+  "diagnostic_source": "eval\\results\\diagnostic_20260624_104037.json",
+  "correlations": [
+    {
+      "pair": "R@10 vs Faithfulness",
+      "retriever": "vector",
+      "n": 14,
+      "rho": 0.43752992709806526,
+      "p": 0.11768825015949662
+    },
+    {
+      "pair": "R@10 vs Faithfulness",
+      "retriever": "dual",
+      "n": 14,
+      "rho": 0.352512468262706,
+      "p": 0.21639444005389277
+    },
+    {
+      "pair": "R@10 vs Faithfulness",
+      "retriever": "pooled",
+      "n": 29,
+      "rho": 0.4226525084652295,
+      "p": 0.022361739765901882
+    },
+    {
+      "pair": "R@10 vs Coverage",
+      "retriever": "vector",
+      "n": 14,
+      "rho": -0.08936311758928729,
+      "p": 0.7612802807611028
+    },
+    {
+      "pair": "R@10 vs Coverage",
+      "retriever": "dual",
+      "n": 14,
+      "rho": 0.10463061390276181,
+      "p": 0.721862245754918
+    },
+    {
+      "pair": "R@10 vs Coverage",
+      "retriever": "pooled",
+      "n": 28,
+      "rho": 0.025870567410643874,
+      "p": 0.8960328471146265
+    },
+    {
+      "pair": "Faithfulness vs Coverage",
+      "retriever": "vector",
+      "n": 14,
+      "rho": 0.016548185905350492,
+      "p": 0.9552239821922895
+    },
+    {
+      "pair": "Faithfulness vs Coverage",
+      "retriever": "dual",
+      "n": 14,
+      "rho": -0.14014011317351574,
+      "p": 0.6327651308684608
+    },
+    {
+      "pair": "Faithfulness vs Coverage",
+      "retriever": "pooled",
+      "n": 28,
+      "rho": -0.05753332526658176,
+      "p": 0.771205347194884
+    },
+    {
+      "pair": "Confidence vs Faithfulness",
+      "retriever": "vector",
+      "n": 14,
+      "rho": 0.08470178826909346,
+      "p": 0.7734278277150108
+    },
+    {
+      "pair": "Confidence vs Faithfulness",
+      "retriever": "dual",
+      "n": 14,
+      "rho": 0.20504156174308186,
+      "p": 0.4819345657340777
+    },
+    {
+      "pair": "Confidence vs Faithfulness",
+      "retriever": "pooled",
+      "n": 29,
+      "rho": 0.00890769817788993,
+      "p": 0.9634216979595009
+    },
+    {
+      "pair": "Confidence vs Coverage",
+      "retriever": "vector",
+      "n": 14,
+      "rho": 0.25677196169283584,
+      "p": 0.3755254402497302
+    },
+    {
+      "pair": "Confidence vs Coverage",
+      "retriever": "dual",
+      "n": 14,
+      "rho": 0.4288450139351179,
+      "p": 0.12600560480167142
+    },
+    {
+      "pair": "Confidence vs Coverage",
+      "retriever": "pooled",
+      "n": 28,
+      "rho": 0.389707770494235,
+      "p": 0.04036693105794501
+    }
+  ]
+}

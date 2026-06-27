@@ -1,0 +1,12 @@
+{
+  "timestamp": "20260626_124543",
+  "retriever": "dual_v2",
+  "judge_model": "llama-3.3-70b-versatile",
+  "aggregate": {
+    "faithfulness_mean": 0.0,
+    "coverage_mean": 0.0,
+    "n_evaluated": 0
+  },
+  "calibration": {},
+  "per_question": []
+}

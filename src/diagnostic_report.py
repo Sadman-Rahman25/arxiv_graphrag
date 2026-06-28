@@ -170,11 +170,13 @@ def main():
         q_facts = facts.get(qid, [])
 
         per_retriever = {}
-        for retriever in ("vector", "graph", "dual"):
+        for retriever in ("vector", "graph", "dual", "dual_v2"):
             ans = answers_by_qr.get((qid, retriever))
             if ans is None:
                 continue
-            r10 = ret_eval.get(retriever, {}).get("recall@10") if ret_eval else None
+            # dual_v2 uses dual's retrieval; only the generation prompt differs
+            r10_key = "dual" if retriever == "dual_v2" else retriever
+            r10 = ret_eval.get(r10_key, {}).get("recall@10") if ret_eval else None
             f_sc, f_j, f_t = reconstruct_faithfulness(ans, cache, args.judge_model)
             c_sc, c_j, c_t = reconstruct_coverage(ans, q_facts, cache, args.judge_model)
 
@@ -206,7 +208,7 @@ def main():
         header = f"  {'Retriever':<8}  {'Conf':<7}  {'R@10':>6}  {'Cit':>3}  {'Faith':>7}  {'Cov':>7}"
         print(header)
         print(f"  {'-'*8}  {'-'*7}  {'-'*6}  {'-'*3}  {'-'*7}  {'-'*7}")
-        for ret in ("vector", "graph", "dual"):
+        for ret in ("vector", "graph", "dual", "dual_v2"):
             d_r = d["per_retriever"].get(ret)
             if d_r is None:
                 continue
@@ -223,7 +225,7 @@ def main():
     print(f"  {'Retriever':<8}  {'R@10':>7}  {'Faith':>10}  {'Cov':>10}  {'HighConf':>10}  {'Judged':>8}")
     print(f"  {'-'*8}  {'-'*7}  {'-'*10}  {'-'*10}  {'-'*10}  {'-'*8}")
 
-    for retriever in ("vector", "graph", "dual"):
+    for retriever in ("vector", "graph", "dual", "dual_v2"):
         per_r = [d["per_retriever"].get(retriever) for d in diagnostics if d["per_retriever"].get(retriever)]
         r10s = [d["recall_at_10"] for d in per_r if d["recall_at_10"] is not None]
         fs   = [d["faithfulness"] for d in per_r if d["faithfulness"] is not None]

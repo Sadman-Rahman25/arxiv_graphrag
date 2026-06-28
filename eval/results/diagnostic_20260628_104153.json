@@ -1,0 +1,735 @@
+{
+  "timestamp": "20260628_104153",
+  "judge_model": "llama-3.3-70b-versatile",
+  "retrieval_eval_source": "20260622_220716",
+  "diagnostics": [
+    {
+      "question_id": "q01",
+      "question": "How does Self-RAG decide when to retrieve, and how does that differ from active RAG?",
+      "regime": "single-method-noisy",
+      "gold_count": 5,
+      "per_retriever": {
+        "vector": {
+          "confidence": "medium",
+          "citations_n": 3,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.6666666666666666,
+          "faithfulness_judged": 3,
+          "faithfulness_total": 3,
+          "coverage": 0.125,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "medium",
+          "citations_n": 3,
+          "recall_at_10": 0.6,
+          "faithfulness": 0.6,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "medium",
+          "citations_n": 2,
+          "recall_at_10": 0.6,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 2,
+          "faithfulness_total": 2,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "medium",
+          "citations_n": 2,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 3,
+          "faithfulness_total": 3,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q02",
+      "question": "What approaches exist for detecting hallucinations in RAG outputs?",
+      "regime": "single-method-noisy",
+      "gold_count": 5,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 9,
+          "recall_at_10": 0.6,
+          "faithfulness": 0.3333333333333333,
+          "faithfulness_judged": 9,
+          "faithfulness_total": 9,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "high",
+          "citations_n": 6,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.75,
+          "faithfulness_judged": 6,
+          "faithfulness_total": 6,
+          "coverage": 0.0,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 9,
+          "recall_at_10": 0.6,
+          "faithfulness": 0.3333333333333333,
+          "faithfulness_judged": 9,
+          "faithfulness_total": 9,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 7,
+          "faithfulness_total": 7,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q03",
+      "question": "How does Microsoft GraphRAG handle multi-document summarization at the corpus level?",
+      "regime": "specific-named-entity",
+      "gold_count": 4,
+      "per_retriever": {
+        "vector": {
+          "confidence": "medium",
+          "citations_n": 4,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.7,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "medium",
+          "citations_n": 5,
+          "recall_at_10": 0.25,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.125,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "medium",
+          "citations_n": 4,
+          "recall_at_10": 0.75,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 1,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 2,
+          "faithfulness_total": 2,
+          "coverage": 0.625,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q04",
+      "question": "How do legal RAG systems handle long-form documents and case retrieval?",
+      "regime": "vector-only-no-bridges",
+      "gold_count": 5,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": 0.4,
+          "faithfulness": 0.5714285714285714,
+          "faithfulness_judged": 7,
+          "faithfulness_total": 7,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "medium",
+          "citations_n": 3,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.875,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.0,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": 0.4,
+          "faithfulness": 0.5714285714285714,
+          "faithfulness_judged": 7,
+          "faithfulness_total": 7,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 4,
+          "recall_at_10": null,
+          "faithfulness": 0.875,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q05",
+      "question": "What techniques are used for hard negative mining in dense passage retrieval?",
+      "regime": "multi-method-precise",
+      "gold_count": 4,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 10,
+          "recall_at_10": 0.25,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 10,
+          "faithfulness_total": 10,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "high",
+          "citations_n": 3,
+          "recall_at_10": 0.5,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.5,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.8571428571428571,
+          "faithfulness_judged": 7,
+          "faithfulness_total": 7,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 3,
+          "recall_at_10": null,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 3,
+          "faithfulness_total": 3,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q06",
+      "question": "How are knowledge graphs integrated into RAG pipelines for question answering?",
+      "regime": "single-method-specific",
+      "gold_count": 4,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": 0.5,
+          "faithfulness": 0.75,
+          "faithfulness_judged": 8,
+          "faithfulness_total": 8,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "medium",
+          "citations_n": 4,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.9,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.0,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": 0.5,
+          "faithfulness": 0.75,
+          "faithfulness_judged": 8,
+          "faithfulness_total": 8,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q07",
+      "question": "What is RAGTruth and how is it used to evaluate RAG systems?",
+      "regime": "single-paper-focused",
+      "gold_count": 1,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 1,
+          "recall_at_10": 1.0,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 2,
+          "faithfulness_total": 2,
+          "coverage": 0.5,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "low",
+          "citations_n": 1,
+          "recall_at_10": 0.0,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 3,
+          "faithfulness_total": 3,
+          "coverage": 0.0,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 1,
+          "recall_at_10": 1.0,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 2,
+          "faithfulness_total": 2,
+          "coverage": 0.5,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 1,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 2,
+          "faithfulness_total": 2,
+          "coverage": 0.625,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q08",
+      "question": "What approaches combine BM25 with dense retrieval for hybrid search?",
+      "regime": "multi-method",
+      "gold_count": 5,
+      "per_retriever": {
+        "vector": {
+          "confidence": "medium",
+          "citations_n": 3,
+          "recall_at_10": 0.2,
+          "faithfulness": 0.875,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": 0.6,
+          "faithfulness": 0.4,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": 0.6,
+          "faithfulness": 0.9,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q09",
+      "question": "What approaches use specialized code embeddings for retrieval-augmented code generation?",
+      "regime": "multi-method",
+      "gold_count": 5,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": 0.8,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 8,
+          "faithfulness_total": 8,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "abstain",
+          "citations_n": 0,
+          "recall_at_10": 0.0,
+          "faithfulness": null,
+          "faithfulness_judged": 0,
+          "faithfulness_total": 0,
+          "coverage": null,
+          "coverage_judged": 0,
+          "coverage_total": 0
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": 0.8,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 8,
+          "faithfulness_total": 8,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 2,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 2,
+          "faithfulness_total": 2,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q10",
+      "question": "How do medical and biomedical RAG systems integrate clinical knowledge bases?",
+      "regime": "vector-only-no-bridges",
+      "gold_count": 4,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.9375,
+          "faithfulness_judged": 8,
+          "faithfulness_total": 8,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "low",
+          "citations_n": 10,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.05,
+          "faithfulness_judged": 10,
+          "faithfulness_total": 10,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.9375,
+          "faithfulness_judged": 8,
+          "faithfulness_total": 8,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 4,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.125,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q11",
+      "question": "What is RAGAS and what metrics does it use to evaluate retrieval-augmented generation?",
+      "regime": "single-method-specific",
+      "gold_count": 1,
+      "per_retriever": {
+        "vector": {
+          "confidence": "medium",
+          "citations_n": 5,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.75,
+          "faithfulness_judged": 6,
+          "faithfulness_total": 6,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "medium",
+          "citations_n": 2,
+          "recall_at_10": 1.0,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 3,
+          "faithfulness_total": 3,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 10,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.375,
+          "faithfulness_judged": 12,
+          "faithfulness_total": 12,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 6,
+          "recall_at_10": null,
+          "faithfulness": 0.5714285714285714,
+          "faithfulness_judged": 7,
+          "faithfulness_total": 7,
+          "coverage": 0.5,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q12",
+      "question": "How are cross-encoder rerankers combined with bi-encoder dense retrievers in RAG pipelines?",
+      "regime": "multi-method",
+      "gold_count": 1,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 3,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.375,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "high",
+          "citations_n": 4,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.3,
+          "faithfulness_judged": 5,
+          "faithfulness_total": 5,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 3,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.3333333333333333,
+          "faithfulness_judged": 3,
+          "faithfulness_total": 3,
+          "coverage": 0.375,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "medium",
+          "citations_n": 2,
+          "recall_at_10": null,
+          "faithfulness": 0.6666666666666666,
+          "faithfulness_judged": 3,
+          "faithfulness_total": 3,
+          "coverage": 0.125,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q13",
+      "question": "How does HyDE differ from query expansion approaches like Query2Doc?",
+      "regime": "multi-method",
+      "gold_count": 3,
+      "per_retriever": {
+        "vector": {
+          "confidence": "low",
+          "citations_n": 10,
+          "recall_at_10": 0.6666666666666666,
+          "faithfulness": 0.2727272727272727,
+          "faithfulness_judged": 11,
+          "faithfulness_total": 11,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "high",
+          "citations_n": 8,
+          "recall_at_10": 0.6666666666666666,
+          "faithfulness": 0.3,
+          "faithfulness_judged": 10,
+          "faithfulness_total": 10,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 4,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 4,
+          "faithfulness_total": 4,
+          "coverage": 0.75,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 2,
+          "recall_at_10": null,
+          "faithfulness": 0.5,
+          "faithfulness_judged": 2,
+          "faithfulness_total": 2,
+          "coverage": 0.5,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    },
+    {
+      "question_id": "q14",
+      "question": "What techniques exist for cross-lingual and multilingual retrieval-augmented generation?",
+      "regime": "vector-only-no-bridges",
+      "gold_count": 4,
+      "per_retriever": {
+        "vector": {
+          "confidence": "high",
+          "citations_n": 7,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.7857142857142857,
+          "faithfulness_judged": 7,
+          "faithfulness_total": 7,
+          "coverage": 0.0,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "graph": {
+          "confidence": "medium",
+          "citations_n": 6,
+          "recall_at_10": 0.0,
+          "faithfulness": 0.8333333333333334,
+          "faithfulness_judged": 6,
+          "faithfulness_total": 6,
+          "coverage": 0.0,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual": {
+          "confidence": "high",
+          "citations_n": 9,
+          "recall_at_10": 1.0,
+          "faithfulness": 0.6111111111111112,
+          "faithfulness_judged": 9,
+          "faithfulness_total": 9,
+          "coverage": 0.25,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        },
+        "dual_v2": {
+          "confidence": "high",
+          "citations_n": 5,
+          "recall_at_10": null,
+          "faithfulness": 1.0,
+          "faithfulness_judged": 6,
+          "faithfulness_total": 6,
+          "coverage": 0.0,
+          "coverage_judged": 4,
+          "coverage_total": 4
+        }
+      }
+    }
+  ]
+}
